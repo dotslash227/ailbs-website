@@ -1,0 +1,528 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<section class="banner_slider">
+    <div class="Modern-Slider">
+        {% for each in slides %}
+            <div class="item">
+                <div class="img-fill">
+                    <img src="{{each.image.url}}" alt="">
+                    <div class="info">
+                        <div>                                
+                            {{each.content|safe}}
+                            <a href="#" class="register_btn auto_modal" data-modal="popup-register">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}                        
+    </div>
+    
+    <!-- Counter -->
+    <div class="banner_counter">
+        <div class="countdown">
+            <div id="timer">
+                <ul>
+                    <li><span class="name_cnd">Days</span><span id="days"></span></li>
+                    <li><span class="name_cnd">Hours</span><span id="hours"></span></li>
+                    <li><span class="name_cnd">Minutes</span><span id="minutes"></span></li>
+                    <li><span class="name_cnd">Seconds</span><span id="seconds"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- //END Counter -->
+</section><!--//END Banner -->
+
+<!-- Welcome Message -->
+<section id="section2" class="content welcome" style="background-color:#FDF5E6">
+        <div class="container">
+            <div class="main_heading clearfix">
+                <h2>WELCOME</h2>
+            </div>
+    
+            <p>Dear Colleagues,</p>
+            <p>
+                Liver transplant have recently completed successful 50 Years and currently we are in an exciting era of liver medicine, surgery, anesthesia and critical care. On this occasion, we are delighted to invite you to the "The AILBS International Conference" to be held from 15-17 February, 2019, New Delhi, India. At that time of the year, the weather in New Delhi would be excellent and the venue is exquisite “ITC Maurya & The Taj Palace”, a green heaven in Diplomatic Enclave. In this conference, we will feast you on the history, innovation, latest views, practice, controversies and the way forward in liver diseases and transplantation, from thought leaders across the globe. The theme would be Indications and Innovations in Liver Transplantation: “The Way Forward”. 
+            </p>
+            <p>
+                Recognizing the significant developments in laparoscopic and robotic liver surgery, the conference will be preceded by a pre-conference workshop on “Minimally Invasive Liver Surgery”. The meeting also aims to address the ongoing problem of organ donation through a pre-conference symposium on "Deceased Donor Liver Transplantation in India: Current Status". 
+            </p>
+            <p>
+                The meeting aims to enable informed management options by enhancing the understanding to clinical problems related to liver diseases (Surgery, Medicine, Anesthesia and Critical Care) in Adults and Children, as key opinion leaders present updated scientific literature with their personal viewpoint. 
+            </p>
+            <p>
+                As always, it will also be a great opportunity for the younger members of the liver community to present their work and engage with expert faculty from across the world. 
+            </p>
+            <p>
+                We look forward to welcoming you to Delhi at its colorful best! 
+            </p>
+            <p>
+                Regards,<br />The AILBS Team<br />Fortis Hospitals, Delhi-NCR, India
+            </p>        
+        </div>
+    </section><!--//END Welcome Message -->
+
+    <!-- Organizing Committee -->
+<section id="section3 content coordinators" class="content dark_bg" style="background-image: url('../static/img/light_bg.jpg');background-size: cover">
+    <div class="container">
+        <div class="main_heading center clearfix">
+            <h2>AILBS Organizing Committee</h2>
+        </div>
+        <div class="coordinator_main">
+        <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#oc">Organizing Chairman and Secretary</a></li>
+                <li><a data-toggle="tab" href="#surgery">Surgery</a></li>
+                <li><a data-toggle="tab" href="#hepa">Hepatology</a></li>
+                <li><a data-toggle="tab" href="#anes">Anesthesia and Critical Care</a></li>
+                <li><a data-toggle="tab" href="#overseas">Overseas Advisor</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="oc" class="tab-pane fade in active">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                            <div class="mem_sec">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="member_img">
+                                            <img src="{% static "docs/doe.png" %}">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h2>Organizing Chairman</h2>
+                                        <p>Vivek Vij</p>                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="mem_sec">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="member_img">
+                                            <img src="{% static "docs/doe.png" %}">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h2>Organizing Secretary</h2>
+                                        <p>Ashish Singhal</p>                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div id="overseas" class="tab-pane fade in">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/simulshah.jpg" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Simul Shah</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                    </div>
+                </div>
+            
+            <div id="anes" class="tab-pane fade in">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/doe.png" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Piyush Srivastava</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/doe.png" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Anil Agarwal</h2>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                    <div class="mem_sec">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="member_img">
+                                                    <img src="{% static "docs/doe.png" %}">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h2>Amit Jha</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="mem_sec">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="member_img">
+                                                    <img src="{% static "docs/doe.png" %}">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h2>Suvyl Rodricks</h2>                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                        <div class="mem_sec">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <div class="member_img">
+                                                        <img src="{% static "docs/doe.png" %}">
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h2>Tanuja Malik</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mem_sec">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <div class="member_img">
+                                                        <img src="{% static "docs/doe.png" %}">
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h2>Vivek Yadav</h2>                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                </div>
+            <div id="hepa" class="tab-pane fade in">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/doe.png" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Manav Wadhawan</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/doe.png" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Mukul Rastogi</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            <div id="surgery" class="tab-pane fade in">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/doe.png" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Vivek Vij</h2>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                <img src="{% static "docs/doe.png" %}">
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>Vishal Chorasiya</h2>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                    <div class="mem_sec">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="member_img">
+                                                    <img src="{% static "docs/doe.png" %}">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h2>Ajitabh Srivastava</h2>                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                        <div class="mem_sec">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <div class="member_img">
+                                                        <img src="{% static "docs/doe.png" %}">
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h2>Ashish Singhal</h2>                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                            <div class="mem_sec">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <div class="member_img">
+                                                            <img src="{% static "docs/doe.png" %}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h2>Kausar Makki</h2>                                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                                <div class="mem_sec">
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <div class="member_img">
+                                                                <img src="{% static "docs/doe.png" %}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h2>Arif Khan</h2>                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                    <div class="mem_sec">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <div class="member_img">
+                                                                    <img src="{% static "docs/doe.png" %}">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <h2>Furqan Ahmed</h2>                                            
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</section><!--//END Organizing Committee -->
+
+<!-- Coordinators -->
+<section id="section4" class="content coordinators">
+        <div class="container">
+            <div class="main_heading center clearfix">
+                <h2>Faculty</h2>
+            </div>
+    
+            <div class="coordinator_main">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#IIC">International Faculty</a></li>
+                    <li><a data-toggle="tab" href="#IRC">National Faculty</a></li>
+                </ul>
+    
+                <div class="tab-content">
+                    <div id="IIC" class="tab-pane fade in active">
+                        <div class="row">
+                            {% for each in interfac %}
+                            <a href="{{each.cv.url}}">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="mem_sec">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="member_img">
+                                                    <img src="{{each.image.url}}">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h2>{{each.name}}</h2>
+                                                <p>{{each.country}}</p>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>                                          
+                    </div>
+                    <div id="IRC" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% for each in nationalfac %}
+                                    <p>{{each.name}}</p>
+                                {% endfor %}
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section><!--//END Coordinators -->
+
+<!-- Scientific Programme -->
+<section id="section5" class="content" style="background-color: #f4f4f4">
+        <div class="container">
+            <div class="main_heading center clearfix">
+                <h2>CONFERENCE HIGHLIGHTS</h2>
+            </div>
+            <h3>Coming Soon</h3>
+        </div>
+</section><!--//END Scientific Programme -->
+
+<!-- Registration -->
+<section id="section6" class="content">
+        <div class="container">
+    
+            <div class="main_heading center clearfix">
+                <h2>Registration</h2>
+            </div>
+    
+            <div class="reg_main">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <td>
+                                Registration<br>
+                                Type
+                            </td>
+                            <td>
+                                Before<br>
+                                15th November 2018
+                            </td>
+                            <td>
+                                From 16th November 2018 to<br>
+                                31st January 2019 
+                            </td>
+                            <td>
+                                After<br>
+                                31st January 2019
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Workshop (Delegate)</td>
+                            <td>Rs. 12,000</td>
+                            <td>Rs. 15,000</td>
+                            <td>Rs. 20,000</td>
+                        </tr>
+                        <tr>
+                            <td>Workshop (Trainee)</td>
+                            <td>Rs. 8,000</td>
+                            <td>Rs. 10,000</td>
+                            <td>Rs. 15,000</td>
+                        </tr>
+                        <tr>
+                            <td>Delegate (National)</td>
+                            <td>Rs. 6,000</td>
+                            <td>Rs. 8,000</td>
+                            <td>Rs. 10,000</td>
+                        </tr>
+                        <tr>
+                            <td>Accompanying Person (National)</td>
+                            <td>Rs. 4,000</td>
+                            <td>Rs. 6,000</td>
+                            <td>Rs. 8,000</td>
+                        </tr>
+                        <tr>
+                            <td>Trainees (National)
+                            </td>
+                            <td>Rs. 4,000</td>
+                            <td>Rs. 6,000</td>
+                            <td>Rs. 8,000</td>
+                        </tr>
+                        <tr>
+                            <td>Delegate (International)</td>
+                            <td>$ 150</td>
+                            <td>$ 200</td>
+                            <td>$ 250</td>
+                        </tr>
+                        <tr>
+                            <td>Accompanying person (International)</td>
+                            <td>$ 75</td>
+                            <td>$ 100</td>
+                            <td>$ 125</td>
+                        </tr>
+                        <tr>
+                            <td>Trainees (International)*</td>
+                            <td>$ 75</td>
+                            <td>$ 100</td>
+                            <td>$ 125</td>
+                        </tr>                    
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="table_info">
+                    <div class="media-body">
+                        <p><i>*For Trainees either National/International (Fellow/Residents/Students etc.) a certificate of their trainee status is required from Head/Chairperson of the department.
+                            </i></p>
+                        <p><i>*All Fees are inclusive of GST</i></p>
+                    </div>
+                </div>
+    
+                <br>
+                
+                <a href="#" class="register_btn auto_modal" data-modal="popup-register">Register Now</a>
+            </div>
+        </div>
+    </section><!--//END Registration -->
+
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
