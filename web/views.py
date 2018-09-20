@@ -9,3 +9,10 @@ def index(request):
     return render(request, "index.html", {
     "slides":slides, "nationalfac": nationalfac, "interfac": interfac,
     })
+
+
+def contact(request):
+
+    return render(request, "contact.html", {
+        
+    })

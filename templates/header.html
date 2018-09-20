@@ -30,7 +30,7 @@
                     <div class="nav-menus-wrapper">
                         <ul class="nav-menu">
                             <li class="active">
-                                <a href="#">HOME</a>
+                                <a href="{% url "web:index" %}">HOME</a>
                                 <ul class="nav-dropdown">
                                     <li><a href="{% url "web:index" %}/#section2">Welcome Message</a></li>
                                     <li><a href="{% url "web:index" %}/#section3">Organizing Committee</a></li>                                    
@@ -72,7 +72,7 @@
                                 </ul>
                             </li>
                             <!-- <li><a href="contact-us.html">Event Manager</a></li> -->
-                            <li><a href="/contact/">Contact</a></li>
+                            <li><a href="{% url "web:contact" %}">Contact</a></li>
                         </ul>
                     </div>
 

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+
+<!-- Banner -->
+<section class="banner inner_banner" style="background-image: url('../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+
+
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Contact Us</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+    <div class="container">
+        <div class="main_heading clearfix">
+            <h2>Contact Us</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-uppercase"style="font-size: 14px;">Leave a Message</h3>
+                                <form name='zsWebToCase_260212000000585094' id='zsWebToCase_260212000000585094'
+                      action='../external.html?link=https://desk.zoho.com/support/WebToCase' method='POST'
+                      enctype='multipart/form-data'>
+                    <input type='hidden' name='xnQsjsdp' value='D5*HCZKEwdbbsy-V*kINXg$$'/>
+                    <input type='hidden' name='xmIwtLD' value='LhzBAmRUR1W0hLczH9EQEX2ptd3vT5BS'/>
+                    <input type='hidden' name='xJdfEaS' value=''/>
+                    <input type='hidden' name='actionType' value='Q2FzZXM='/>
+                    <input type="hidden" id="property(module)" value="Cases"/>
+                    <input type="hidden" id="dependent_field_values_Cases" value="&#x7b;&quot;JSON_VALUES&quot;&#x3a;&#x7b;&quot;Category&quot;&#x3a;&#x7b;&quot;Sub&#x20;Category&quot;&#x3a;&#x7b;&quot;General&quot;&#x3a;&#x5b;&quot;Sub&#x20;General&quot;&#x5d;,&quot;Defects&quot;&#x3a;&#x5b;&quot;Sub&#x20;Defects&quot;&#x5d;&#x7d;&#x7d;&#x7d;,&quot;JSON_SELECT_VALUES&quot;&#x3a;&#x7b;&quot;Status&quot;&#x3a;&#x5b;&quot;Open&quot;,&quot;On&#x20;Hold&quot;,&quot;Escalated&quot;,&quot;Closed&quot;&#x5d;,&quot;Category&quot;&#x3a;&#x5b;&quot;General&quot;,&quot;Defects&quot;&#x5d;,&quot;Priority&quot;&#x3a;&#x5b;&quot;-None-&quot;,&quot;High&quot;,&quot;Medium&quot;,&quot;Low&quot;&#x5d;,&quot;Mode&quot;&#x3a;&#x5b;&quot;Phone&quot;,&quot;Twitter&quot;,&quot;Facebook&quot;,&quot;Email&quot;,&quot;Web&quot;,&quot;Chat&quot;,&quot;Forums&quot;,&quot;Feedback&#x20;Widget&quot;&#x5d;,&quot;Classification&quot;&#x3a;&#x5b;&quot;-None-&quot;,&quot;Question&quot;,&quot;Problem&quot;,&quot;Feature&quot;,&quot;Others&quot;&#x5d;,&quot;Sub&#x20;Category&quot;&#x3a;&#x5b;&quot;Sub&#x20;General&quot;,&quot;Sub&#x20;Defects&quot;&#x5d;&#x7d;,&quot;JSON_MAP_DEP_LABELS&quot;&#x3a;&#x5b;&quot;Category&quot;&#x5d;&#x7d;"/>
+                    <input type='hidden' name='returnURL' value='index117b.html?contact_support=true'/>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form_input" placeholder="Username"  maxlength='120' name='Contact Name' required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form_input" placeholder="Email" maxlength='120' name='Email' required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form_input" placeholder="Phone No" maxlength='10' minlength="10" name='Phone' required>
+                        <input type='hidden' maxlength='255' name='Subject' value='INASL 2018' class='manfieldbdr'/>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form_input" placeholder="Message..." name='Description' maxlength='3000' required></textarea>
+                    </div>
+
+                                        <button type='submit' id="zsSubmitButton_260212000000585094" class="register_btn contact_btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div class="contact_map">
+                    <h3 class="text-uppercase"style="font-size: 14px;">Find us on Map</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3428.5055833160945!2d76.77438281461141!3d30.76038659135144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1462166382418" style="border:0" allowfullscreen="" frameborder="0" width="100%" height="300"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}

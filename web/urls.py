@@ -5,4 +5,5 @@ app_name = "web"
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('contact', views.contact, name="contact"),
 ]
