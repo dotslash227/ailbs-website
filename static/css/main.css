@@ -2650,7 +2650,7 @@ ol.breadcrumb{
     vertical-align:middle;
     margin-top: 10%;
     font-family: 'Play', sans-serif;
-    max-width: 620px;
+    max-width: 100%px;
 }
 
 .Modern-Slider .item h3{
