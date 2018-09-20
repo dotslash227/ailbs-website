@@ -12,8 +12,8 @@ class HomeSlider(models.Model):
 class InternationalFaculty(models.Model):
     name = models.CharField(max_length=150)
     country = models.CharField(max_length=150)
-    image = models.FileField(max_length=250, upload_to="faculties")
-    cv = models.FileField(max_length=250, upload_to="faculties/cv")
+    image = models.FileField(max_length=250, upload_to="faculties", blank=True, null=True)
+    cv = models.FileField(max_length=250, upload_to="faculties/cv", blank=True, null=True)
 
     def __str__(self):
         return self.name
