@@ -383,7 +383,11 @@
                                         <div class="media">
                                             <div class="media-left">
                                                 <div class="member_img">
+                                                    {% if not each.image %}
+                                                    <img src="{% static "img/national/user.png" %}">
+                                                    {% else %}
                                                     <img src="{{each.image.url}}">
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                             <div class="media-body">
