@@ -1,8 +1,9 @@
 .theme-title{
     background-color:teal;
-    color:white;
+    color: yellow;
     text-align: center;
     width: 100%;
     padding:25px;
     font-size: 2em;
+    font-weight: bolder;
 }

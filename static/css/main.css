@@ -1426,8 +1426,8 @@ header.header{
 .coordinator_main .nav-tabs > li.active > a,
 .coordinator_main .nav-tabs > li.active > a:focus,
 .coordinator_main .nav-tabs > li.active > a:hover{
-    background-color: #c82323;
-    box-shadow: inset 0px 3px 0px 0px #b60e0e;
+    background-color: teal;
+    box-shadow: inset 0px 3px 0px 0px teal;
     color: #fff;
 }
 
@@ -1449,6 +1449,7 @@ header.header{
 }
 .reg_main .table{
     background-color: #fff;
+    overflow: hidden;
 }
 
 
@@ -1464,7 +1465,7 @@ header.header{
 .reg_main .table > tfoot > tr > th,
 .reg_main .table > thead > tr > td,
 .reg_main .table > thead > tr > th{
-    padding: 12px;
+    padding: 5px;
 }
 
 .reg_main tr:nth-child(even) {background-color: #f2f2f2;}
