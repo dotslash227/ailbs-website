@@ -377,7 +377,11 @@
                     <div id="IIC" class="tab-pane fade in active">
                         <div class="row">
                             {% for each in interfac %}
+                            {% if each.cv %}
                             <a href="{{each.cv.url}}">
+                            {% else %}
+                            <a href="#">
+                            {% endif %}
                                 <div class="col-md-4 col-sm-6">
                                     <div class="mem_sec">
                                         <div class="media">
