@@ -12,7 +12,7 @@
                     <div class="info">
                         <div>                                
                             {{each.content|safe}}
-                            <a href="#" class="register_btn auto_modal" data-modal="popup-register">Register Now</a>
+                            <a href="{% url "registration:index" %}" class="register_btn">Register Now</a>
                         </div>
                     </div>
                 </div>
@@ -525,7 +525,7 @@
     
                 <br>
                 
-                <a href="#" class="register_btn auto_modal" data-modal="popup-register">Register Now</a>
+                <a href="{% url "registration:index" %}" class="register_btn">Register Now</a>
             </div>
         </div>
     </section><!--//END Registration -->

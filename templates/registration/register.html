@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}Register for AILBS Conference{% endblock title %}
+
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Registration for AILBS International Conference</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+        <div class="container">
+            <div class="main_heading center clearfix">
+                <h2>Registration form for the AILBS Conference</h2>
+            </div>            
+            <form name="registration-form" action="{% url "registration:index" %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    {% for field in form %}
+                        <div class="col-md-3">
+                            {{field.label}}<br />
+                            {% render_field field|add_class:"form-control" %}
+                        </div>
+                    {% endfor %}
+                </div><br />
+                <input type="submit" class="btn btn-success" value="Register Now and Proceed to Payment Gateway" />
+            </form>
+            <br />            
+        </div>
+    </section>
+
+
+    <section id="section6" class="content">
+            <div class="container">
+        
+                <div class="main_heading center clearfix">
+                    <h2>Registration Fees</h2>
+                </div>
+        
+                <div class="reg_main">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <td>
+                                    Registration
+                                     Type
+                                </td>
+                                <td>
+                                Before
+                                     15th November 2018
+                                </td>
+                                <td>
+                                From 16th November 2018 to
+                                     31st January 2019 
+                                </td>
+                                <td>
+                                After
+                                     31st January 2019
+                                </td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Workshop (Delegate)</td>
+                                <td>Rs. 12,000</td>
+                                <td>Rs. 15,000</td>
+                                <td>Rs. 20,000</td>
+                            </tr>
+                            <tr>
+                                <td>Workshop (Trainee)</td>
+                                <td>Rs. 8,000</td>
+                                <td>Rs. 10,000</td>
+                                <td>Rs. 15,000</td>
+                            </tr>
+                            <tr>
+                                <td>Delegate (National)</td>
+                                <td>Rs. 6,000</td>
+                                <td>Rs. 8,000</td>
+                                <td>Rs. 10,000</td>
+                            </tr>
+                            <tr>
+                                <td>Accompanying Person (National)</td>
+                                <td>Rs. 4,000</td>
+                                <td>Rs. 6,000</td>
+                                <td>Rs. 8,000</td>
+                            </tr>
+                            <tr>
+                                <td>Trainees (National)
+                                </td>
+                                <td>Rs. 4,000</td>
+                                <td>Rs. 6,000</td>
+                                <td>Rs. 8,000</td>
+                            </tr>
+                            <tr>
+                                <td>Delegate (International)</td>
+                                <td>$ 150</td>
+                                <td>$ 200</td>
+                                <td>$ 250</td>
+                            </tr>
+                            <tr>
+                                <td>Accompanying person (International)</td>
+                                <td>$ 75</td>
+                                <td>$ 100</td>
+                                <td>$ 125</td>
+                            </tr>
+                            <tr>
+                                <td>Trainees (International)*</td>
+                                <td>$ 75</td>
+                                <td>$ 100</td>
+                                <td>$ 125</td>
+                            </tr>                    
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <div class="table_info">
+                        <div class="media-body">
+                            <p><i>*For Trainees either National/International (Fellow/Residents/Students etc.) a certificate of their trainee status is required from Head/Chairperson of the department.
+                                </i></p>
+                            <p><i>*All Fees are inclusive of GST</i></p>
+                        </div>
+                    </div>        
+                    <br>                                        
+                </div>
+            </div>
+        </section><!--//END Registration -->
+
+{% endblock content %}
