@@ -45,6 +45,7 @@ class RegistrationPage(View):
         registration = form.save(commit=False)
         registration.txnid = response["payment_request"]["id"]
         registration.amount = amount
+        registration.save()
 
         instamojo_url = response["payment_request"]["longurl"]
 
