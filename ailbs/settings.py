@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'registration',
-    'widget_tweaks',
+    'widget_tweaks',    
 ]
 
 SITE_ID = 1
