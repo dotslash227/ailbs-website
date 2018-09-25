@@ -3,3 +3,4 @@ django-ckeditor
 Pillow
 django-widget-tweaks
 instamojo_wrapper
+django-import-export

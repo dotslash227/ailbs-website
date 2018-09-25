@@ -1,5 +1,9 @@
 from django.contrib import admin
 
 from .models import Registration
+from import_export.admin import ImportExportActionModelAdmin
 
-admin.site.register(Registration)
+class RegistrationAdmin(ImportExportActionModelAdmin):
+    pass
+
+admin.site.register(Registration, RegistrationAdmin)
