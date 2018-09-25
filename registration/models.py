@@ -21,6 +21,8 @@ class Registration(models.Model):
         ("Male", "Male"),
         ("Female", "Female"),
     ))
+    hospital = models.CharField(max_length=50, blank=True, null=True)
+    country = models.CharField(max_length=50, blank=True, null=True)
     registration_number = models.CharField(max_length=100, blank=True, null=True, verbose_name="Medical Council Registration Number")    
     accompany = models.BooleanField(default=False, choices=(
         (True, "Yes"),
@@ -38,8 +40,7 @@ class Registration(models.Model):
     accompanying_gender = models.CharField(max_length=15, default="Male", choices=(
         ("Male", "Male"),
         ("Female", "Female"),
-    ), verbose_name="Gender of accompanying person, if any")
-    accompanying_registration_number = models.CharField(max_length=150, blank=True, null=True, verbose_name="Medical Council Registration Number of accompanying person, if any")
+    ), verbose_name="Gender of accompanying person, if any")    
     mode_of_payment = models.CharField(max_length=25, blank=True, null=True)
     txnid = models.CharField(max_length=25, blank=True, null=True)
     amount = models.FloatField(blank=True, null=True)
