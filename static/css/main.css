@@ -1341,9 +1341,9 @@ header.header{
     float: left;
 }
 .member_img img{
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
 }
 .mem_sec{
     border: 1px solid #ebebeb;
@@ -2885,7 +2885,7 @@ ol.breadcrumb{
         margin-top: 170px;
     }
     .Modern-Slider .item .img-fill {
-        height: 170px;
+        max-height: 100px;
     }
     .Modern-Slider .item h5{
         line-height: 16px;
