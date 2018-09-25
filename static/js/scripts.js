@@ -81,7 +81,7 @@
 
         if ($(window).scrollTop() > 2 * (getHeaderHeight + shadowAmount + borderAmount) ) {
 
-            $('body').addClass('scrollActive');
+            $('body').addClass('');
             $('.header').css('top', 0);
 
             if (currentScrollPosition < lastScrollPosition) {
