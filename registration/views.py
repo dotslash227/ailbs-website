@@ -31,46 +31,8 @@ class RegistrationPage(View):
         
         amount = str(amount)
 
-        api = Instamojo(api_key="92ea3466d534bb7f2c711c93e5052c22", auth_token="2fd7faa07866e873a04b4eed72acd2c9")
-        response = api.payment_request_create(
-            amount = amount,
-            purpose = "AILBS Registration",
-            send_email = False,
-            send_sms = False,
-            email = request.POST.get("email"),
-            buyer_name = request.POST.get("first_name") + " " + request.POST.get("last_name"),
-            phone = request.POST.get("mobile"),
-            redirect_url = "http://www.ailbsindiaconference.com/registration/handle_instamojo"
-        ) 
-        registration = form.save(commit=False)
-        registration.txnid = response["payment_request"]["id"]
+        registration = form.save(commit=False)        
         registration.amount = amount
         registration.save()
 
-        instamojo_url = response["payment_request"]["longurl"]
-
-        return redirect(instamojo_url)
-
-
-
-def handle_instamojo(request):    
-    response = api.payment_request_payment_status(request.POST.get("id"))
-    user = Registration.objects.get(txnid=request.POST.get("id"))
-    status = response["payment_request"]["status"]
-    user.status = status
-    user.save()
-
-    if status == "success":
-        url = "registration:success"
-    else:
-        url = "registration:failure"
-
-    return redirect(url)
-
-
-def successPage(request):
-    pass
-
-
-def failurePage(request):
-    pass
+        return render(request, "registration/success.html", {})

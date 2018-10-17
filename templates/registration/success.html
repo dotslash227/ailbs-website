@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}Register for AILBS Conference{% endblock title %}
+
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Registration for AILBS International Conference</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+        <div class="container">
+            <div class="main_heading center clearfix">
+                <h2>Registration form for the AILBS Conference</h2>
+            </div>            
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Your registration details has been taken into account. Please click on the button below to proceed to our payment gateway partner to make the payment for the conference registration.</p>
+                    <center><a href="https://www.goeventz.com/event/ailbs-international-conference/79604"><button class="btn btn-success">Click here to make the payment</button></a></center>
+                </div>
+            </div>
+            <br />            
+        </div>
+    </section>
+
+
+{% endblock content %}
