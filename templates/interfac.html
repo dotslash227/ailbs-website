@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title  %}Faculties{% endblock title %}
+
+{% block content %}
+
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">International and National Faculty</li>
+        </ol>
+    </div>
+</div>
+
+
+<section id="section4" class="content coordinators">
+    <div class="container">
+        <div class="main_heading center clearfix">
+            <h2>International and National Faculty</h2>
+        </div>
+
+        <div class="coordinator_main">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#IIC">International Faculty</a></li>
+                <li><a data-toggle="tab" href="#IRC">National Faculty</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="IIC" class="tab-pane fade in active">
+                    <div class="row">
+                        {% for each in interfac %}
+                        {% if each.cv %}
+                        <a href="{{each.cv.url}}">
+                        {% else %}
+                        <a href="#">
+                        {% endif %}
+                            <div class="col-md-4 col-sm-6">
+                                <div class="mem_sec">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="member_img">
+                                                {% if not each.image %}
+                                                <img src="{% static "img/national/user.png" %}">
+                                                {% else %}
+                                                <img src="{{each.image.url}}">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h2>{{each.name}}</h2>
+                                            <p>{{each.country}}</p>                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>                                          
+                </div>
+                <div id="IRC" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% for each in nationalfac %}
+                                <p>{{each.name}}</p>
+                            {% endfor %}
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!--//END Coordinators -->
+{% endblock content %}

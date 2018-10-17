@@ -16,3 +16,11 @@ def contact(request):
     return render(request, "contact.html", {
         
     })
+
+def interfac(request):
+    nationalfac = NationalFaculty.objects.all()
+    interfac = InternationalFaculty.objects.all()
+
+    return render(request, "interfac.html", {
+      "nationalfac": nationalfac, "interfac": interfac,  
+    })
