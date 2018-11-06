@@ -8,6 +8,25 @@
     font-weight: bolder;
 }
 
+.marquee{
+    animation: marquee 5s linear infinite;
+
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.marquee-image{
+    max-height:100px;
+}
+
 .conf-image{
     margin-top: -110px;
 }

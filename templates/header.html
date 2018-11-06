@@ -27,7 +27,7 @@
                         <div class="nav-toggle"></div>
                     </div>
 
-                    <div class="nav-menus-wrapper">
+                    <div class="nav-menus-wrapper" style="width:120%; margin-left:-35px;">
                         <ul class="nav-menu">
                             <li class="active">
                                 <a href="{% url "web:index" %}">HOME</a>
@@ -63,6 +63,7 @@
                             <li>
                                 <a href="{% url "registration:index" %}" target="_blank">REGISTRATION</a>                                
                             </li>
+                            <li><a href="/pages/endorsements/">ENDORSEMENTS</a></li>
                             <li><a href="/pages/exhibitors/">EXHIBITORS</a></li>
                             <li>
                                 <a href="#">ACCOMODATION</a>
@@ -70,8 +71,7 @@
                                     <li><a href="/pages/venue">Venue</a></li>
                                     <li><a href="/pages/in-and-around">In and Around</a></li>                                    
                                 </ul>
-                            </li>
-                            <!-- <li><a href="contact-us.html">Event Manager</a></li> -->
+                            </li>                            
                             <li><a href="{% url "web:contact" %}">Contact</a></li>
                         </ul>
                     </div>
@@ -80,9 +80,24 @@
             </div>            
         </div>
         <div class="container theme-title">
-            <div class="row">
-                <div class="col-md-12">
-                    Indications and Innovations In Liver Transplantation : "The Way Forward"
+            <div class="row marquee">
+                <div class="col-md-3">
+                    Indications and Innovations In Liver Transplantation : "The Way Forward"                    
+                </div>
+                <div class="col-md-3" style="margin-right:-350px;">
+                    <img src="{% static "sponsors/fortis.jpg" %}" class="img-responsive" style="max-width:100px;" />
+                </div>
+                <div class="col-md-3" style="margin-right:-350px;">
+                    <img src="{% static "sponsors/ilts.png" %}" class="img-responsive" style="max-width:100px;" />
+                </div>
+                <div class="col-md-3" style="margin-right:-150px;">
+                    <img src="{% static "sponsors/isot.jpg" %}" class="img-responsive" style="max-width:300px;" />
+                </div>
+                <div class="col-md-3" style="margin-right:-150px;">
+                    <img src="{% static "sponsors/ldltsg.jpg" %}" class="img-responsive" style="max-width:300px;" />
+                </div>
+                <div class="col-md-3" style="margin-right:-350px;">
+                    <img src="{% static "sponsors/ttslogo.png" %}" class="img-responsive" style="max-width:300px;" />
                 </div>
             </div>            
         </div>        
