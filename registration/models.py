@@ -22,6 +22,13 @@ class Registration(models.Model):
         ("Female", "Female"),
     ))
     hospital = models.CharField(max_length=50, blank=True, null=True)
+    speciality = models.CharField(max_length=50, choices=(
+        ("Surgery", "Surgery"),
+        ("Hepatology", "Hepatology"),
+        ("Anesthesia", "Anesthesia"),
+        ("Critical Care", "Critical Care"),
+        ("Others", "Others")
+    ), blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
     registration_number = models.CharField(max_length=100, blank=True, null=True, verbose_name="Medical Council Registration Number")    
     accompany = models.BooleanField(default=False, choices=(
