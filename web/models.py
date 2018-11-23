@@ -18,8 +18,23 @@ class InternationalFaculty(models.Model):
     def __str__(self):
         return self.name
 
-class NationalFaculty(models.Model):
-    name = models.CharField(max_length=150)
+class SurgeryFaculty(models.Model):
+    name = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+class HepatologyFaculty(models.Model):
+    name = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+class AnasthesiaFaculty(models.Model):
+    name = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name

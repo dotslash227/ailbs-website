@@ -1,13 +1,16 @@
 from django.shortcuts import render
-from .models import HomeSlider, NationalFaculty, InternationalFaculty
+from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
 
 def index(request):
     slides = HomeSlider.objects.all()
-    nationalfac = NationalFaculty.objects.all()
+    surgery = SurgeryFaculty.objects.all()
+    anes = AnasthesiaFaculty.objects.all()
+    hepa = HepatologyFaculty.objects.all()
     interfac = InternationalFaculty.objects.all()
 
     return render(request, "index.html", {
-    "slides":slides, "nationalfac": nationalfac, "interfac": interfac,
+    "slides":slides, "interfac": interfac,
+    "surgery": surgery, "anes": anes, "hepa": hepa,
     })
 
 
@@ -17,10 +20,13 @@ def contact(request):
         
     })
 
-def interfac(request):
-    nationalfac = NationalFaculty.objects.all()
+def interfac(request):    
     interfac = InternationalFaculty.objects.all()
+    surgery = SurgeryFaculty.objects.all()
+    anes = AnasthesiaFaculty.objects.all()
+    hepa = HepatologyFaculty.objects.all()
 
     return render(request, "interfac.html", {
-      "nationalfac": nationalfac, "interfac": interfac,  
+      "interfac": interfac,
+      "surgery": surgery, "anes": anes, "hepa": hepa,
     })
