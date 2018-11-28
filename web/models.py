@@ -17,7 +17,7 @@ class InternationalFaculty(models.Model):
     cv = models.FileField(max_length=250, upload_to="faculties/cv", blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.fname
 
 class SurgeryFaculty(models.Model):
     ffname = models.CharField(max_length=50)
@@ -25,7 +25,7 @@ class SurgeryFaculty(models.Model):
     city = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.name
+        return self.fname
 
 class HepatologyFaculty(models.Model):
     fname = models.CharField(max_length=50)
@@ -33,7 +33,7 @@ class HepatologyFaculty(models.Model):
     city = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.name
+        return self.fname
 
 class AnasthesiaFaculty(models.Model):
     fname = models.CharField(max_length=50)
@@ -41,4 +41,4 @@ class AnasthesiaFaculty(models.Model):
     city = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.name
+        return self.fname
