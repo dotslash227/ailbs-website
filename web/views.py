@@ -3,10 +3,10 @@ from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, Anasthesia
 
 def index(request):
     slides = HomeSlider.objects.all()
-    surgery = SurgeryFaculty.objects.all().order_by("name")
-    anes = AnasthesiaFaculty.objects.all().order_by("name")
-    hepa = HepatologyFaculty.objects.all().order_by("name")
-    interfac = InternationalFaculty.objects.all().order_by("name")
+    surgery = SurgeryFaculty.objects.all().order_by("lname")
+    anes = AnasthesiaFaculty.objects.all().order_by("lname")
+    hepa = HepatologyFaculty.objects.all().order_by("lname")
+    interfac = InternationalFaculty.objects.all().order_by("lname")
 
     return render(request, "index.html", {
     "slides":slides, "interfac": interfac,
@@ -21,10 +21,10 @@ def contact(request):
     })
 
 def interfac(request):    
-    surgery = SurgeryFaculty.objects.all().order_by("name")
-    anes = AnasthesiaFaculty.objects.all().order_by("name")
-    hepa = HepatologyFaculty.objects.all().order_by("name")
-    interfac = InternationalFaculty.objects.all().order_by("name")
+    surgery = SurgeryFaculty.objects.all().order_by("lname")
+    anes = AnasthesiaFaculty.objects.all().order_by("lname")
+    hepa = HepatologyFaculty.objects.all().order_by("lname")
+    interfac = InternationalFaculty.objects.all().order_by("lname")
 
     return render(request, "interfac.html", {
       "interfac": interfac,

@@ -10,7 +10,8 @@ class HomeSlider(models.Model):
 
 
 class InternationalFaculty(models.Model):
-    name = models.CharField(max_length=150)
+    fname = models.CharField(max_length=150)
+    lname = models.CharField(max_length=150, blank=True, null=True)
     country = models.CharField(max_length=150)
     image = models.FileField(max_length=250, upload_to="faculties", blank=True, null=True)
     cv = models.FileField(max_length=250, upload_to="faculties/cv", blank=True, null=True)
@@ -19,21 +20,24 @@ class InternationalFaculty(models.Model):
         return self.name
 
 class SurgeryFaculty(models.Model):
-    name = models.CharField(max_length=50)
+    ffname = models.CharField(max_length=50)
+    lname = models.CharField(max_length=50, blank=True, null=True)
     city = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
 
 class HepatologyFaculty(models.Model):
-    name = models.CharField(max_length=50)
+    fname = models.CharField(max_length=50)
+    lname = models.CharField(max_length=50, blank=True, null=True)
     city = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
 
 class AnasthesiaFaculty(models.Model):
-    name = models.CharField(max_length=50)
+    fname = models.CharField(max_length=50)
+    lname = models.CharField(max_length=50, blank=True, null=True)
     city = models.CharField(max_length=50)
 
     def __str__(self):

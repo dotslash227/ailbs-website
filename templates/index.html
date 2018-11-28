@@ -420,7 +420,7 @@
                                                 </div>
                                             </div>
                                             <div class="media-body">
-                                                <h2>{{each.name}}</h2>
+                                                <h2>{{each.fname}} {{each.lname}}</h2>
                                                 <p>{{each.country}}</p>                                                
                                             </div>
                                         </div>
@@ -435,19 +435,19 @@
                             <div class="col-md-4" style="border-right:1px solid teal;">
                                 <h2 style="text-align: center; color: #008080; text-decoration: underline;" >Surgery</h2>
                                 {% for each in surgery %}
-                                    <p style="text-align: center;">{{each.name}} ({{each.city}})</p>
+                                    <p style="text-align: center;">{{each.fname}} {{each.lname}} ({{each.city}})</p>
                                 {% endfor %}
                             </div>
                             <div class="col-md-4" style="border-right:1px solid teal;">
                                 <h2 style="text-align: center; color: #008080; text-decoration: underline;" >Hepatology</h2>
                                 {% for each in hepa %}
-                                    <p style="text-align: center;">{{each.name}} ({{each.city}})</p>
+                                    <p style="text-align: center;">{{each.fname}} {{each.lname}} ({{each.city}})</p>
                                 {% endfor %}
                             </div>
                             <div class="col-md-4" style="border-right:1px solid teal;">
                                 <h2 style="text-align: center; color: #008080; text-decoration: underline;" >Anesthesia</h2>
                                 {% for each in anes %}
-                                    <p style="text-align: center;">{{each.name}} ({{each.city}})</p>
+                                    <p style="text-align: center;">{{each.fname}} {{each.lname}} ({{each.city}})</p>
                                 {% endfor %}
                             </div>
                         </div>
@@ -609,7 +609,7 @@
                         </tr>
                         <tr>
                             <td>Delegate (International)</td>
-                            <td>$ 0</td>
+                            <td>$ 150</td>
                             <td>$ 200</td>
                             <td>$ 250</td>
                         </tr>
