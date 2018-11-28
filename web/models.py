@@ -20,7 +20,7 @@ class InternationalFaculty(models.Model):
         return self.fname
 
 class SurgeryFaculty(models.Model):
-    ffname = models.CharField(max_length=50)
+    fname = models.CharField(max_length=50)
     lname = models.CharField(max_length=50, blank=True, null=True)
     city = models.CharField(max_length=50)
 
