@@ -1,15 +1,16 @@
 from django.shortcuts import render, redirect
 from .models import Registration
 from django.views import View
-from .forms import RegistrationForm
+from .forms import RegistrationForm, AnesRegistrationForm
 from instamojo_wrapper import Instamojo
 
 class RegistrationPage(View):
     def get(self, request):
         form = RegistrationForm()
+        anesForm = AnesRegistrationForm()
 
         return render(request, "registration/register.html", {
-            "form": form,
+            "form": form, "anesform": anesForm,
         })
 
     def post(self, request):

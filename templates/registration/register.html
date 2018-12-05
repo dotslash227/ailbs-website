@@ -46,6 +46,28 @@
     </section>
 
 
+    <section class="content_area">
+        <div class="container">
+            <div class="main_heading center clearfix">
+                <h2>Registration form for Anesthesia Sessions</h2>
+            </div>            
+            <form name="registration-form" action="{% url "registration:index" %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    {% for field in anesform %}
+                        <div class="col-md-3">
+                            {{field.label}}<br />
+                            {% render_field field|add_class:"form-control" %}
+                        </div>
+                    {% endfor %}
+                </div><br />
+                <!-- <p style="font-style:italic; font-size:13px; font-weight:100;">After clicking on register now, you will be redirected to your secure payment gateway powered by Instamojo, where you can pay your registration fee by the following methods: Credit Card, Debit Card, Net Banking, Digital Wallets, UPI and NEFT. Please refer to the table below for information on detailed registration fees.</p> -->
+                <input type="submit" class="btn btn-success" value="Register Now" />
+            </form>
+            <br />                          
+        </div>
+    </section>
+
     <section id="section6" class="content">
             <div class="container">
         
