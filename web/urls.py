@@ -12,4 +12,7 @@ urlpatterns = [
     path('apis/surgery-faculty', apis.surgeryFaculty),
     path('apis/hepa-faculty', apis.hepaFaculty),
     path('apis/anes-faculty', apis.anesFaculty),
+    path('apis/get-downloads', apis.downloadapi),
+    path('apis/get-news-list', apis.newslist),
+    path('apis/news/<int:news_id>', apis.newsitem),
 ]

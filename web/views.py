@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
+from .models import News, Downloads
 
 def index(request):
     slides = HomeSlider.objects.all()

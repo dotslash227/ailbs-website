@@ -42,3 +42,20 @@ class AnasthesiaFaculty(models.Model):
 
     def __str__(self):
         return self.fname
+
+
+class Downloads(models.Model):
+    name = models.CharField(max_length=500)
+    dfile = models.FileField(max_length=150, upload_to="downloadfiles")
+
+    def __str__(self):
+        return self.name
+
+class News(models.Model):
+    title = models.CharField(max_length=500)
+    image = models.FileField(max_length=500, upload_to="images-news")
+    description = models.TextField(blank=True, null=True)
+    content = RichTextUploadingField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
