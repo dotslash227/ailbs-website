@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from .models import InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import Downloads, News
+from .models import Downloads, News, Agenda
 
 
 @csrf_exempt
@@ -100,5 +100,23 @@ def newsitem(request, news_id):
         "image": "https://www.ailbsindiaconference.com" + news.image.url,
         "content": news.content
     }
+
+    return JsonResponse(data, safe=False)
+
+
+@csrf_exempt
+def agendaapi(request):
+    agenda = Agenda.objects.all().order_by("day")
+    data = []
+    for each in agenda:
+        record = {
+            "date": each.date,
+            "title": each.title,
+            "day": each.day,
+            "venue": each.venue,
+            "speaker": each.speaker,
+            "description": each.description
+        }
+        data.append(record)
 
     return JsonResponse(data, safe=False)
