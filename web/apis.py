@@ -83,7 +83,7 @@ def newslist(request):
     data = []
     for each in newslist:
         record = {
-            "id": each.pk
+            "id": each.pk,
             "title": each.title,
             "description": each.description,
             "image": "https://www.ailbsindiaconference.com" + each.image.url
