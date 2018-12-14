@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}Submit Abstract{% endblock title %}
+
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Submit Abstract for the AILBS Conference 2019 at New Delhi</li>
+        </ol>
+    </div>
+</div>
+
+{% if flag %}
+
+<section class="content_area">
+    <div class="container">
+        <div class="main_heading center clearfix">
+            <h2>DEADLINE FOR ABSTRACT SUBMISSION : 31ST JANUARY 2019</h2>
+        </div>            
+        <form name="abstract-form" action="{% url "registration:abstract" %}" method="post">
+            <p style="text-align:center;">1. You can add upto 5 co-authors on the abstract submission</p>
+            <p style="text-align:center;">2. Title should not be of more than 25 words</p>
+            <p style="text-align:center;">3. Content of abstract should not be of more than 250 words</p>
+            <hr />
+            {% csrf_token %}
+            <div class="row">
+                {% for field in form %}
+                    <div class="col-md-3">
+                        <!-- {{field.label}}<br /> -->
+                        <strong>{{field.label}}</strong>{% render_field field|add_class:"form-control" %}
+                    </div>                        
+                {% endfor %}
+            </div><br />                
+            <center><input type="submit" class="btn btn-success" value="Click on this button Submit Abstract" /></center>
+        </form>
+        <br />                      
+    </div>
+</section>
+    
+{% else %}
+
+<section class="content_area">
+    <div class="container">
+        <div class="main_heading center clearfix">
+            <h2>DEADLINE FOR ABSTRACT SUBMISSION : 31ST JANUARY 2019</h2>
+        </div>
+        <div>
+            <h4 style="text-align: center;">Your Abstract has been succesfully submitted to us.</h4>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+{% endblock content %}

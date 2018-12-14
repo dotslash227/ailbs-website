@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 class Registration(models.Model):
     date_added = models.DateField(default=timezone.now)
@@ -124,3 +125,32 @@ class AnesthesiaRegistration(models.Model):
 
     def __str__(self):
         return self.first_name + " " + self.last_name
+
+
+class AbstractSubmission(models.Model):
+    date_added = models.DateField(default=timezone.now)
+    author1_name = models.CharField(max_length=150, blank=True, null=True)
+    author1_email = models.CharField(max_length=150, blank=True, null=True)
+    author1_institution = models.CharField(max_length=150, blank=True, null=True)
+    author1_specialisation = models.CharField(max_length=150, blank=True, null=True)
+    author2_name = models.CharField(max_length=150, blank=True, null=True)
+    author2_email = models.CharField(max_length=150, blank=True, null=True)
+    author2_institution = models.CharField(max_length=150, blank=True, null=True)
+    author2_specialisation = models.CharField(max_length=150, blank=True, null=True)
+    author3_name = models.CharField(max_length=150, blank=True, null=True)
+    author3_email = models.CharField(max_length=150, blank=True, null=True)
+    author3_institution = models.CharField(max_length=150, blank=True, null=True)
+    author3_specialisation = models.CharField(max_length=150, blank=True, null=True)
+    author4_name = models.CharField(max_length=150, blank=True, null=True)
+    author4_email = models.CharField(max_length=150, blank=True, null=True)
+    author4_institution = models.CharField(max_length=150, blank=True, null=True)
+    author4_specialisation = models.CharField(max_length=150, blank=True, null=True)
+    author5_name = models.CharField(max_length=150, blank=True, null=True)
+    author5_email = models.CharField(max_length=150, blank=True, null=True)
+    author5_institution = models.CharField(max_length=150, blank=True, null=True)
+    author5_specialisation = models.CharField(max_length=150, blank=True, null=True)
+    title = models.CharField(max_length=150)
+    content = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title

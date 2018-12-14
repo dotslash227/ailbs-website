@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Registration
 from django.views import View
-from .forms import RegistrationForm, AnesRegistrationForm
+from .forms import RegistrationForm, AnesRegistrationForm, AbstractForm
 from instamojo_wrapper import Instamojo
 
 class RegistrationPage(View):
@@ -37,3 +37,19 @@ class RegistrationPage(View):
         registration.save()
 
         return render(request, "registration/success.html", {})
+
+
+class Abstract(View):
+    def get(self, request):
+        form = AbstractForm()
+        return render(request, "registration/abstract.html", {
+            "form": form, "flag":True
+        })
+    
+    def post(self, request):
+        form = AbstractForm(request.POST)
+        form.save()
+
+        return render(request, "registration/abstract.html", {
+            "flag":False,
+        })
