@@ -105,8 +105,8 @@ def newsitem(request, news_id):
 
 
 @csrf_exempt
-def agendaapi(request):
-    agenda = Agenda.objects.all().order_by("day")
+def agendaapi(request, day):
+    agenda = Agenda.objects.filter(day=day).order_by("day")
     data = []
     for each in agenda:
         record = {
