@@ -10,8 +10,8 @@ class RegistrationForm(ModelForm):
 
 class AnesRegistrationForm(ModelForm):
     class Meta:
-        model = Registration
-        exclude = ["amount", "status", "txnid", "mode_of_payment", "date_added"]
+        model = AnesthesiaRegistration
+        exclude = ["date_added"]  
 
 class AbstractForm(ModelForm):
     class Meta:

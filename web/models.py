@@ -63,7 +63,7 @@ class News(models.Model):
 
 
 class Agenda(models.Model):
-    date = models.DateField(default=timezone.now())
+    date = models.DateField(default=timezone.now)
     time_range = models.CharField(max_length=50)
     title = models.CharField(max_length=150)
     venue = models.CharField(max_length=150)

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}Register for AILBS Conference{% endblock title %}
+
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Registration for AILBS International Conference</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+        <div class="container">
+            <div class="main_heading center clearfix">
+                <h2>Registration form for the AILBS Conference</h2>
+            </div>            
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Thank you for registering at the AILBS International Conference 2019. Your registration for the Anesthesia sessions have been completed.</p>                    
+                </div>
+            </div>
+            <br />            
+        </div>
+    </section>
+
+
+{% endblock content %}

@@ -39,6 +39,15 @@ class RegistrationPage(View):
         return render(request, "registration/success.html", {})
 
 
+def registrationAnesthesia(request):
+    form = AnesRegistrationForm(request.POST)
+    form.save()
+
+    return render(request, "registration/success-a.html", {
+
+    })
+
+
 class Abstract(View):
     def get(self, request):
         form = AbstractForm()

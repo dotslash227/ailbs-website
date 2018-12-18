@@ -37,7 +37,7 @@
             <br /> 
             <div class="table_info">
                 <div class="media-body">
-                    <p><i>Registration for Anesthesia session is compulsory. Registration fees can also be paid offline, by direct cash deposit or NEFT/RTGS/IMPS or Cheque/DD deposit to our bank account, mentioned below. Please email us at ailbs2019conference@gmail.com if doing payment by offline means, so that we are able to verify and process ontime.
+                    <p><i>Registration for Anesthesia session is compulsory, but complimentary. Registration fees can also be paid offline, by direct cash deposit or NEFT/RTGS/IMPS or Cheque/DD deposit to our bank account, mentioned below. Please email us at ailbs2019conference@gmail.com if doing payment by offline means, so that we are able to verify and process ontime.
                         </i></p>
                     <p><b>Beneficiary Name</b>: Healthy Liver Trust | <b>IFSC</b>: HDFC0004403 | <b>Account Number</b>: 50200031351959 | <b>Bank Name</b>: HDFC Bank | <b>Branch</b>: Maharani Bagh | <b>Branch Code</b>: 4403</p>
                 </div>
@@ -51,7 +51,7 @@
             <div class="main_heading center clearfix">
                 <h2>Registration form for Anesthesia Sessions</h2>
             </div>            
-            <form name="registration-form" action="{% url "registration:index" %}" method="post">
+            <form name="registration-form" action="{% url "registration:a-registration" %}" method="post">
                 {% csrf_token %}
                 <div class="row">
                     {% for field in anesform %}
