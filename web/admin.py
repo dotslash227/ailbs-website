@@ -17,13 +17,16 @@ class FlatPageAdmin(FlatPageAdmin):
 class CommonAdmin(ImportExportActionModelAdmin):
     pass
 
+class CommonAdmin2(ImportExportActionModelAdmin):
+    list_display = ["fname", "lname"]
+
 # Re-register FlatPageAdmin
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
 admin.site.register(Agenda, CommonAdmin)
 admin.site.register(HomeSlider)
 admin.site.register(SurgeryFaculty, CommonAdmin)
-admin.site.register(AnasthesiaFaculty, CommonAdmin)
+admin.site.register(AnasthesiaFaculty, CommonAdmin2)
 admin.site.register(HepatologyFaculty, CommonAdmin)
 admin.site.register(InternationalFaculty)
 admin.site.register(Downloads)
