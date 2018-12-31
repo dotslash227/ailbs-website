@@ -3,7 +3,8 @@
 <div class="main_header" id="section1">
     <div class="ticker_alert">
         <p class="ticker_alert_para">
-            <span style="font-size:12px;"><a href="https://liver.gastroconferences.com" target="_blank">3rd World Liver Congress | Abu Dhabi, UAE | December 17-18 2018 | Click here for more information </a></span>
+            <a href="https://play.google.com/store/apps/details?id=com.ailbs" target="_blank"><img src="{% static "play-store.png" %}" style="width:75px;" /></a>
+            <a href="https://itunes.apple.com/gb/app/ailbs-international-conference/id1446865009?mt=8" target="_blank"><img src="{% static "iphone.png" %}" style="width: 75px;" /></a>
         </p>
     </div>
     <header class="header">
@@ -63,16 +64,17 @@
                             </li>
                             <li><a href="/pages/call-for-abstracts">Call for Abstracts</a>         
                             </li>
+                            <li><a href="/pages/government-clearances/">GOVT. CLEARANCES</a></li>
                             <li>
                                 <a href="{% url "registration:index" %}">REGISTRATION</a>                                
-                            </li>
-                            <li><a href="/pages/endorsements/">ENDORSEMENTS</a></li>
+                            </li>                            
                             <li><a href="/pages/exhibitors/">EXHIBITORS/SPONSORS</a></li>
                             <li>
-                                <a href="#">ACCOMODATION</a>
+                                <a href="#">MORE</a>
                                 <ul class="nav-dropdown">
                                     <li><a href="/pages/venue">Venue</a></li>
-                                    <li><a href="/pages/in-and-around">In and Around</a></li>                                    
+                                    <li><a href="/pages/in-and-around">In and Around</a></li>
+                                    <li><a href="/pages/endorsements/">ENDORSEMENTS</a></li>
                                 </ul>
                             </li>                            
                             <li><a href="{% url "web:contact" %}">Contact</a></li>

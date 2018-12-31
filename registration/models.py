@@ -28,6 +28,8 @@ class Registration(models.Model):
         ("Hepatology", "Hepatology"),
         ("Anesthesia", "Anesthesia"),
         ("Critical Care", "Critical Care"),
+        ("Pathology", "Pathology"),
+        ("Radiology", "Radiology"),
         ("Others", "Others")
     ), blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
@@ -53,11 +55,11 @@ class Registration(models.Model):
     txnid = models.CharField(max_length=25, blank=True, null=True)
     amount = models.FloatField(blank=True, null=True)
     status = models.CharField(max_length=25, blank=True, null=True)
-    plan = models.IntegerField(blank=True, null=True, choices=(
-        (1, "Workshop (Delegate)"),
-        (2, "Workshop (Trainee)"),
-        (3, "Delegate (National)"),
-        (4, "Trainees (National)"),        
+    plan = models.IntegerField(default=1, choices=(
+        (1, "Conference (Delegate)"),
+        (2, "Conference (Trainee)"),
+        (3, "Conference + Workshop (Delegate)"),
+        (4, "Conference + Workshop (Trainee)"),
     ), verbose_name="Choose your registration type")
 
     def __str__(self):
@@ -91,6 +93,8 @@ class AnesthesiaRegistration(models.Model):
         ("Hepatology", "Hepatology"),
         ("Anesthesia", "Anesthesia"),
         ("Critical Care", "Critical Care"),
+        ("Pathology", "Pathology"),
+        ("Radiology", "Radiology"),
         ("Others", "Others")
     ), blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
