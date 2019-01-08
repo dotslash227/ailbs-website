@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Registration, AnesthesiaRegistration
+from .models import Registration, AnesthesiaRegistration, AbstractSubmission
 from import_export.admin import ImportExportActionModelAdmin
 
 class RegistrationAdmin(ImportExportActionModelAdmin):
@@ -8,3 +8,4 @@ class RegistrationAdmin(ImportExportActionModelAdmin):
 
 admin.site.register(Registration, RegistrationAdmin)
 admin.site.register(AnesthesiaRegistration, RegistrationAdmin)
+admin.site.register(AbstractSubmission)
