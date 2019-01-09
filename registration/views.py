@@ -13,7 +13,7 @@ def sendemail(attendee, mode):
     subject = "Confirmation of registration for the AILBS International Conference 2019"
     from_email = "AILBS India Conference <no-reply@ailbsindiaconference.com>"
 
-    msg = send_mail(subject, content, from_email, ["dhruvarora@delhinerds.com"], html_message=html_content_original)
+    msg = send_mail(subject, content, from_email, [attendee.email], html_message=html_content_original)
 
     try:
         msg.send()
