@@ -33,6 +33,7 @@ class Registration(models.Model):
         ("Others", "Others")
     ), blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
+    passport_number = models.CharField(max_length=50, blank=True, null=True, verbose_name="Passport number is required for foreign attendees")
     registration_number = models.CharField(max_length=100, blank=True, null=True, verbose_name="Medical Council Registration Number")    
     accompany = models.BooleanField(default=False, choices=(
         (True, "Yes"),
@@ -50,11 +51,7 @@ class Registration(models.Model):
     accompanying_gender = models.CharField(max_length=15, default="Male", choices=(
         ("Male", "Male"),
         ("Female", "Female"),
-    ), verbose_name="Gender of accompanying person, if any")    
-    mode_of_payment = models.CharField(max_length=25, blank=True, null=True)
-    txnid = models.CharField(max_length=25, blank=True, null=True)
-    amount = models.FloatField(blank=True, null=True)
-    status = models.CharField(max_length=25, blank=True, null=True)
+    ), verbose_name="Gender of accompanying person, if any")        
     plan = models.IntegerField(default=1, choices=(
         (1, "Conference (Delegate)"),
         (2, "Conference (Trainee)"),
@@ -98,6 +95,7 @@ class AnesthesiaRegistration(models.Model):
         ("Others", "Others")
     ), blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
+    passport_number = models.CharField(max_length=50, blank=True, null=True, verbose_name="Passport number is required for foreign attendees")
     registration_number = models.CharField(max_length=100, blank=True, null=True, verbose_name="Medical Council Registration Number")        
 
     def __str__(self):

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6xjm9@v%(u875!0^*61ws!$5+q_q3u5jmd#(6uew(onr-^u0o('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -210,3 +210,11 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+# Email settings
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = "587"
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "no-reply-client@delhinerds.com"
+EMAIL_HOST_PASSWORD = "Dillirox@2703"
