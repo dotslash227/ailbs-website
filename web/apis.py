@@ -14,7 +14,7 @@ def internationalFaculty(request):
             "fname": each.fname,
             "lname": each.lname,
             "country": each.country,
-            "image": "https://www.ailbsindiaconference.com" + each.image.url
+            "image": "https://www.ailbsindiaconference.com" + each.image.url,
             "cvlink": "https://www.ailbsindiaconference.com" + each.cv.url
         }
         data.append(record)
