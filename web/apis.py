@@ -10,12 +10,16 @@ def internationalFaculty(request):
     inter = InternationalFaculty.objects.all().order_by("lname")    
     data = []
     for each in inter:
+        if  not each.cv:
+            cvlink = None
+        else:
+            cvlink = "https://www.ailbsindiaconference.com" + each.cv.url
         record = {
             "fname": each.fname,
             "lname": each.lname,
             "country": each.country,
             "image": "https://www.ailbsindiaconference.com" + each.image.url,
-            "cvlink": "https://www.ailbsindiaconference.com" + each.cv.url
+            "cvlink": cvlink
         }
         data.append(record)
 
