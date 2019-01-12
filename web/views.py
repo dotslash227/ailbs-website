@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import News, Downloads
+from .models import News, Downloads, Agenda15, Agenda16, Agenda17
 
 def index(request):
     slides = HomeSlider.objects.all()
@@ -31,3 +31,12 @@ def interfac(request):
       "interfac": interfac,
       "surgery": surgery, "anes": anes, "hepa": hepa,
     })
+
+def programeglance(request):
+  agenda15 = Agenda15.objects.all()
+  agenda16 = Agenda16.objects.all()
+  agenda17 = Agenda17.objects.all()
+
+  return render(request, "glance.html", {
+    "a1": agenda15, "a2":agenda16, "a3":agenda17,
+  })

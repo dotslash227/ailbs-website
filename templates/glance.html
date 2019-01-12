@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Program-at-a-glance{% endblock title %}
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section>
+<!--//END Banner -->
+<!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Program-at-a-glance</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+    <div class="container">
+        <div class="main_heading clearfix">
+            <h2>Program-at-a-glance</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr style="background-color:teal; color:white; font-weight: bold;">
+                                <td style="text-align: center;"><b>15th February<br />Kamal Hall, ITC Maurya</b></td>                                
+                            </tr>
+                            {% for each in a1 %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <tr style="background-color:teal; color:white;">
+                            {% else %}<tr>{% endif %}
+                                <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr style="background-color:teal; color:white; font-weight: bold;">
+                                <td style="text-align: center;"><b>16th February<br />Shahjahan Hall, Taj Palace</b></td>
+                            </tr>
+                            {% for each in a2 %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <tr style="background-color:teal; color:white;">
+                            {% else %}<tr>{% endif %}
+                                <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr style="background-color:teal; color:white; font-weight: bold;">
+                                <td style="text-align: center;"><b>15th February<br />Shahjahan Hall, Taj Palace</b></td>
+                            </tr>
+                            {% for each in a3 %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <tr style="background-color:teal; color:white;">
+                            {% else %}<tr>{% endif %}
+                                <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

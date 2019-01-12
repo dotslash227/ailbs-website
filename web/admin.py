@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import Downloads, News, Agenda
+from .models import Downloads, News, Agenda15, Agenda16, Agenda17
 from django.db import models
 from django.contrib.flatpages.admin import FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
@@ -23,7 +23,7 @@ class CommonAdmin2(ImportExportActionModelAdmin):
 # Re-register FlatPageAdmin
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
-admin.site.register(Agenda, CommonAdmin)
+admin.site.register(Agenda15, CommonAdmin)
 admin.site.register(HomeSlider)
 admin.site.register(SurgeryFaculty, CommonAdmin)
 admin.site.register(AnasthesiaFaculty, CommonAdmin2)

@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('international-faculty', views.interfac, name="interfac"),
     path('national-faculty', views.interfac, name="nationalfac"),
+    path('program-glance', views.programeglance, name="glance"),
     path('apis/international-faculty', apis.internationalFaculty),
     path('apis/surgery-faculty', apis.surgeryFaculty),
     path('apis/hepa-faculty', apis.hepaFaculty),

@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from .models import InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import Downloads, News, Agenda
+from .models import Downloads, News, Agenda15, Agenda16, Agenda17
 
 
 @csrf_exempt
@@ -111,7 +111,7 @@ def newsitem(request, news_id):
 
 @csrf_exempt
 def agendaapi(request, day):
-    agenda = Agenda.objects.filter(day=day).order_by("day")
+    agenda = Agenda15.objects.filter(day=day).order_by("day")
     data = []
     for each in agenda:
         record = {
