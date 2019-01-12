@@ -24,6 +24,8 @@ class CommonAdmin2(ImportExportActionModelAdmin):
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
 admin.site.register(Agenda15, CommonAdmin)
+admin.site.register(Agenda16, CommonAdmin)
+admin.site.register(Agenda17, CommonAdmin)
 admin.site.register(HomeSlider)
 admin.site.register(SurgeryFaculty, CommonAdmin)
 admin.site.register(AnasthesiaFaculty, CommonAdmin2)
