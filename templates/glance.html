@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <table class="table table-bordered">
                         <tbody>
                             <tr style="background-color:#2874A6; color:white; font-weight: bold;">
@@ -37,7 +37,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <table class="table table-bordered">
                         <tbody>
                             <tr style="background-color:#EC7063; color:white; font-weight: bold;">
@@ -53,7 +53,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <table class="table table-bordered">
                         <tbody>
                             <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
@@ -62,6 +62,22 @@
                             {% for each in a3 %}
                             {% if forloop.counter|divisibleby:2 %}
                             <tr style="background-color:#5D6D7E; color:white;">
+                            {% else %}<tr>{% endif %}
+                                <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
+                                <td style="text-align: center;"><b>17th February<br />Parellel Session on Anesthesia and Critical Care<br />Mumtaz Hall Hall, Taj Palace</b></td>
+                            </tr>
+                            {% for each in a4 %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <tr style="background-color:#D4AC0D; color:white;">
                             {% else %}<tr>{% endif %}
                                 <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
                             </tr>
