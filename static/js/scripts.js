@@ -32,6 +32,24 @@
                 return '<a href="javascript:void(0)"></a>';},
         });
 
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:2
+                }
+            }
+        })
+    
+
     });
 
     $(document).ready(function($){
@@ -43,7 +61,6 @@
             }, 800);
         });
     });
-
 
     // $(window).load(function() {
     //     window.scrollTo(0, 0);

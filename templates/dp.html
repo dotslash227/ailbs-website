@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Program-at-a-glance{% endblock title %}
+{% load staticfiles %}
+{% block title %}Daily Program{% endblock title %}
 
 {% block content %}
 <section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section>
@@ -20,10 +21,33 @@
             <h2>Daily Program</h2>
         </div>
         <div class="row">
-            <p>Loading ......</p>
+            <center><div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{% static "dp/1.jpg" %}" style="width:94%;" />
+                </div>
+                <div class="item">
+                    <img src="{% static "dp/2.jpg" %}" style="width:94%" />
+                </div>
+                <div class="item">
+                    <img src="{% static "dp/3.jpg" %}" style="width:94%;" />
+                </div>
+                <div class="item">
+                    <img src="{% static "dp/4.jpg" %}" style="width:94%;" />
+                </div>
+                <div class="item">
+                    <img src="{% static "dp/5.jpg" %}" style="width:94%;" />
+                </div>
+                <div class="item">
+                    <img src="{% static "dp/6.jpg" %}" style="width:94%;" />
+                </div>
+            </div></center>
         </div>
+    </div>
     </div>
 </section>
 
-
 {% endblock content %}
+
+{% block scripts %}
+
+{% endblock scripts %}
