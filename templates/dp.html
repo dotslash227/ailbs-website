@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Program-at-a-glance{% endblock title %}
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section>
+<!--//END Banner -->
+<!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Daily Program</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+    <div class="container">
+        <div class="main_heading clearfix">
+            <h2>Daily Program</h2>
+        </div>
+        <div class="row">
+            <p>Loading ......</p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

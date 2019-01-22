@@ -41,3 +41,8 @@ def programeglance(request):
   return render(request, "glance.html", {
     "a1": agenda15, "a2":agenda16, "a3":agenda17, "a4":agenda172
   })
+
+
+def dailyprogram(request):
+
+  return render(request, "dp.html", {})
