@@ -64,44 +64,44 @@ class News(models.Model):
 
 class Agenda15(models.Model):
     date = models.DateField(default=timezone.now)
-    time_range = models.CharField(max_length=50)
+    time_range = models.CharField(max_length=50, blank=True, null=True)
     title = models.CharField(max_length=150)
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
-    description = models.TextField(blank=True, null=True)    
+    description = RichTextUploadingField(blank=True, null=True)    
 
     def __str__(self):
         return self.title
 
 class Agenda16(models.Model):
     date = models.DateField(default=timezone.now)
-    time_range = models.CharField(max_length=50)
+    time_range = models.CharField(max_length=50, blank=True, null=True)
     title = models.CharField(max_length=150)
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
-    description = models.TextField(blank=True, null=True)    
+    description = RichTextUploadingField(blank=True, null=True)    
 
     def __str__(self):
         return self.title
 
 class Agenda17(models.Model):
     date = models.DateField(default=timezone.now)
-    time_range = models.CharField(max_length=50)
+    time_range = models.CharField(max_length=50, blank=True, null=True)
     title = models.CharField(max_length=150)
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
-    description = models.TextField(blank=True, null=True)    
+    description = RichTextUploadingField(blank=True, null=True)    
 
     def __str__(self):
         return self.title
 
 class Agenda172(models.Model):
     date = models.DateField(default=timezone.now)
-    time_range = models.CharField(max_length=50)
+    time_range = models.CharField(max_length=50, blank=True, null=True)
     title = models.CharField(max_length=150)
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
-    description = models.TextField(blank=True, null=True)    
+    description = RichTextUploadingField(blank=True, null=True)    
 
     def __str__(self):
         return self.title

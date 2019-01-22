@@ -18,29 +18,154 @@
 <section class="content_area">
     <div class="container">
         <div class="main_heading clearfix">
-            <h2>Daily Program</h2>
+            <h2>Daily Program</h2><br /><br />
+            <p>Please swipe left and right to view the daily program for different days</p>
         </div>
         <div class="row">
-            <center><div class="owl-carousel owl-theme">
-                <div class="item">
-                    <img src="{% static "dp/1.jpg" %}" style="width:94%;" />
-                </div>
-                <div class="item">
-                    <img src="{% static "dp/2.jpg" %}" style="width:94%" />
-                </div>
-                <div class="item">
-                    <img src="{% static "dp/3.jpg" %}" style="width:94%;" />
-                </div>
-                <div class="item">
-                    <img src="{% static "dp/4.jpg" %}" style="width:94%;" />
-                </div>
-                <div class="item">
-                    <img src="{% static "dp/5.jpg" %}" style="width:94%;" />
-                </div>
-                <div class="item">
-                    <img src="{% static "dp/6.jpg" %}" style="width:94%;" />
-                </div>
-            </div></center>
+            <div class="col-md-12">
+
+                <div class="owl-carousel">
+                    <!-- Day 1 -->
+                    <div class="item">
+                            <div class="col-md-12">
+                                    <div class="row">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr style="background-color:#2874A6; color:white; font-weight: bold;">
+                                                    <td style="text-align: center;">15th February<br />Kamal Hall, ITC Maurya</td>
+                                                </tr>
+                                            </tbody>                            
+                                        </table>
+                                        <table class="table table-bordered">                            
+                                            <tbody>                                                
+                                                <tr style="background-color:#2874A6; color:white; font-weight: bold;">
+                                                    <td>Time</td>
+                                                    <td>Title</td>
+                                                    <td>Speaker</td>
+                                                    <td>Chair/Panel</td>
+                                                </tr>
+                                                {% for each in a1 %}
+                                                {% if forloop.counter|divisibleby:2 %}
+                                                <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
+                                                    <td>{{each.time_range}}</td>
+                                                    <td>{{each.title}}</td>
+                                                    <td>{{each.speaker}}</td>
+                                                    <td>{{each.description}}</td>                                                                        
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>  
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="item">
+                            <div class="col-md-12">
+                                    <div class="row">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr style="background-color:#EC7063; color:white; font-weight: bold;">
+                                                    <td style="text-align: center;">16th February<br />Shahjahan Hall, Taj Palace</td>
+                                                </tr>
+                                            </tbody>                            
+                                        </table>
+                                        <table class="table table-bordered">                            
+                                            <tbody>                                                
+                                                <tr style="background-color:#EC7063; color:white; font-weight: bold;">
+                                                    <td>Time</td>
+                                                    <td>Title</td>
+                                                    <td>Speaker</td>
+                                                    <td>Chair/Panel</td>
+                                                </tr>
+                                                {% for each in a2 %}
+                                                {% if forloop.counter|divisibleby:2 %}
+                                                <tr style="background-color:#EC7063; color:white;">{% else %}<tr>{% endif %}
+                                                    <td>{{each.time_range}}</td>
+                                                    <td>{{each.title}}</td>
+                                                    <td>{{each.speaker}}</td>
+                                                    <td>{{each.description}}</td>                                                                        
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>  
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="item">
+                            <div class="col-md-12">
+                                    <div class="row">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
+                                                    <td style="text-align: center;">17th February<br />Shahjahan Hall, Taj Palace</td>
+                                                </tr>
+                                            </tbody>                            
+                                        </table>
+                                        <table class="table table-bordered">                            
+                                            <tbody>                                                
+                                                <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
+                                                    <td>Time</td>
+                                                    <td>Title</td>
+                                                    <td>Speaker</td>
+                                                    <td>Chair/Panel</td>
+                                                </tr>
+                                                {% for each in a3 %}
+                                                {% if forloop.counter|divisibleby:2 %}
+                                                <tr style="background-color:#5D6D7E; color:white;">{% else %}<tr>{% endif %}
+                                                    <td>{{each.time_range}}</td>
+                                                    <td>{{each.title}}</td>
+                                                    <td>{{each.speaker}}</td>
+                                                    <td>{{each.description}}</td>                                                                        
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>  
+                    </div>
+
+
+                    <!-- Day 3 of 2 -->
+                    <div class="item">
+                            <div class="col-md-12">
+                                    <div class="row">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
+                                                    <td style="text-align: center;">17th February<br />Shahjahan Hall, Taj Palace</td>
+                                                </tr>
+                                            </tbody>                            
+                                        </table>
+                                        <table class="table table-bordered">                            
+                                            <tbody>                                                
+                                                <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
+                                                    <td>Time</td>
+                                                    <td>Title</td>
+                                                    <td>Speaker</td>
+                                                    <td>Chair/Panel</td>
+                                                </tr>
+                                                {% for each in a4 %}
+                                                {% if forloop.counter|divisibleby:2 %}
+                                                <tr style="background-color:#D4AC0D; color:white;">{% else %}<tr>{% endif %}
+                                                    <td>{{each.time_range}}</td>
+                                                    <td>{{each.title}}</td>
+                                                    <td>{{each.speaker}}</td>
+                                                    <td>{{each.description}}</td>                                                                        
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>  
+                    </div>
+
+
+
+                </div>                                             
+            </div>
         </div>
     </div>
     </div>
@@ -49,5 +174,10 @@
 {% endblock content %}
 
 {% block scripts %}
+        {% if each.time_range %}
+        <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>
+        {% else %}
+        <td><b>{{each.title}}</td>
+        {% endif %}
 
 {% endblock scripts %}
