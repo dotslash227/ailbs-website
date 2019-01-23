@@ -18,153 +18,159 @@
 <section class="content_area">
     <div class="container">
         <div class="main_heading clearfix">
-            <h2>Daily Program</h2><br /><br />
-            <p>Please swipe left and right to view the daily program for different days</p>
+            <h2>Daily Program</h2>
         </div>
-        <div class="row">
+        <div class="row" style="margin-top:-150px;">
             <div class="col-md-12">
+                <div class="coordinator_main">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#15f">15th February 2019</a></li>
+                        <li><a data-toggle="tab" href="#16f">16th February 2019</a></li>
+                        <li><a data-toggle="tab" href="#17f">17th February 2019</a></li>
+                        <li><a data-toggle="tab" href="#172f">Parellel session on Anesthesia and Critical Care on
+                                17thFebruary 2019</a></li>
+                    </ul>
 
-                <div class="owl-carousel">
-                    <!-- Day 1 -->
-                    <div class="item">
-                            <div class="col-md-12">
-                                    <div class="row">
-                                        <table class="table table-bordered">
-                                            <tbody>
-                                                <tr style="background-color:#2874A6; color:white; font-weight: bold;">
-                                                    <td style="text-align: center;">15th February<br />Kamal Hall, ITC Maurya</td>
-                                                </tr>
-                                            </tbody>                            
-                                        </table>
-                                        <table class="table table-bordered">                            
-                                            <tbody>                                                
-                                                <tr style="background-color:#2874A6; color:white; font-weight: bold;">
-                                                    <td>Time</td>
-                                                    <td>Title</td>
-                                                    <td>Speaker</td>
-                                                    <td>Chair/Panel</td>
-                                                </tr>
-                                                {% for each in a1 %}
-                                                {% if forloop.counter|divisibleby:2 %}
-                                                <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
-                                                    <td>{{each.time_range}}</td>
-                                                    <td>{{each.title}}</td>
-                                                    <td>{{each.speaker}}</td>
-                                                    <td>{{each.description}}</td>                                                                        
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>  
+                    <div class="tab-content">
+
+                        <div id="15f" class="tab-pane fade in active">
+                            <div class="col-md-10" style="text-align: center; margin-left:80px;">
+                                <div class="row">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#2874A6; color:white; font-weight: bold;">
+                                                <td style="text-align: center;">15th February<br />Kamal Hall, ITC
+                                                    Maurya</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#2874A6; color:white; font-weight: bold;">
+                                                <td>Time</td>
+                                                <td>Title</td>
+                                                <td>Speaker</td>
+                                                <td>Chair/Panel</td>
+                                            </tr>
+                                            {% for each in a1 %}
+                                            {% if forloop.counter|divisibleby:2 %}
+                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
+                                                <td>{{each.time_range}}</td>
+                                                <td>{{each.title}}</td>
+                                                <td>{{each.speaker}}</td>
+                                                <td>{{each.description}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="16f" class="tab-pane">
+                            <div class="col-md-10" style="text-align: center; margin-left:80px;">
+                                <div class="row">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#EC7063; color:white; font-weight: bold;">
+                                                <td style="text-align: center;">16th February<br />Shahjahan Hall, Taj
+                                                    Palace</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#EC7063; color:white; font-weight: bold;">
+                                                <td>Time</td>
+                                                <td>Title</td>
+                                                <td>Speaker</td>
+                                                <td>Chair/Panel</td>
+                                            </tr>
+                                            {% for each in a2 %}
+                                            {% if forloop.counter|divisibleby:2 %}
+                                            <tr style="background-color:#EC7063; color:white;">{% else %}<tr>{% endif %}
+                                                <td>{{each.time_range}}</td>
+                                                <td>{{each.title}}</td>
+                                                <td>{{each.speaker}}</td>
+                                                <td>{{each.description}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="17f" class="tab-pane">
+                            <div class="col-md-10" style="text-align: center; margin-left:80px;">
+                                <div class="row">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
+                                                <td style="text-align: center;">17th February<br />Shahjahan Hall, Taj
+                                                    Palace</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
+                                                <td>Time</td>
+                                                <td>Title</td>
+                                                <td>Speaker</td>
+                                                <td>Chair/Panel</td>
+                                            </tr>
+                                            {% for each in a3 %}
+                                            {% if forloop.counter|divisibleby:2 %}
+                                            <tr style="background-color:#5D6D7E; color:white;">{% else %}<tr>{% endif %}
+                                                <td>{{each.time_range}}</td>
+                                                <td>{{each.title}}</td>
+                                                <td>{{each.speaker}}</td>
+                                                <td>{{each.description}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="172f" class="tab-pane">
+                            <div class="col-md-10" style="text-align: center; margin-left:80px;">
+                                <div class="row">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
+                                                <td style="text-align: center;">17th February<br />Parellel Session on
+                                                    Anesthesia and Critical Care<br />Mumtaz Hall, Taj Palace</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
+                                                <td>Time</td>
+                                                <td>Title</td>
+                                                <td>Speaker</td>
+                                                <td>Chair/Panel</td>
+                                            </tr>
+                                            {% for each in a4 %}
+                                            {% if forloop.counter|divisibleby:2 %}
+                                            <tr style="background-color:#D4AC0D; color:white;">{% else %}<tr>{% endif %}
+                                                <td>{{each.time_range}}</td>
+                                                <td>{{each.title}}</td>
+                                                <td>{{each.speaker}}</td>
+                                                <td>{{each.description}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <!-- Day 2 -->
-                    <div class="item">
-                            <div class="col-md-12">
-                                    <div class="row">
-                                        <table class="table table-bordered">
-                                            <tbody>
-                                                <tr style="background-color:#EC7063; color:white; font-weight: bold;">
-                                                    <td style="text-align: center;">16th February<br />Shahjahan Hall, Taj Palace</td>
-                                                </tr>
-                                            </tbody>                            
-                                        </table>
-                                        <table class="table table-bordered">                            
-                                            <tbody>                                                
-                                                <tr style="background-color:#EC7063; color:white; font-weight: bold;">
-                                                    <td>Time</td>
-                                                    <td>Title</td>
-                                                    <td>Speaker</td>
-                                                    <td>Chair/Panel</td>
-                                                </tr>
-                                                {% for each in a2 %}
-                                                {% if forloop.counter|divisibleby:2 %}
-                                                <tr style="background-color:#EC7063; color:white;">{% else %}<tr>{% endif %}
-                                                    <td>{{each.time_range}}</td>
-                                                    <td>{{each.title}}</td>
-                                                    <td>{{each.speaker}}</td>
-                                                    <td>{{each.description}}</td>                                                                        
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>  
-                    </div>
-
-                    <!-- Day 3 -->
-                    <div class="item">
-                            <div class="col-md-12">
-                                    <div class="row">
-                                        <table class="table table-bordered">
-                                            <tbody>
-                                                <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
-                                                    <td style="text-align: center;">17th February<br />Shahjahan Hall, Taj Palace</td>
-                                                </tr>
-                                            </tbody>                            
-                                        </table>
-                                        <table class="table table-bordered">                            
-                                            <tbody>                                                
-                                                <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
-                                                    <td>Time</td>
-                                                    <td>Title</td>
-                                                    <td>Speaker</td>
-                                                    <td>Chair/Panel</td>
-                                                </tr>
-                                                {% for each in a3 %}
-                                                {% if forloop.counter|divisibleby:2 %}
-                                                <tr style="background-color:#5D6D7E; color:white;">{% else %}<tr>{% endif %}
-                                                    <td>{{each.time_range}}</td>
-                                                    <td>{{each.title}}</td>
-                                                    <td>{{each.speaker}}</td>
-                                                    <td>{{each.description}}</td>                                                                        
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>  
-                    </div>
-
-
-                    <!-- Day 3 of 2 -->
-                    <div class="item">
-                            <div class="col-md-12">
-                                    <div class="row">
-                                        <table class="table table-bordered">
-                                            <tbody>
-                                                <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
-                                                    <td style="text-align: center;">17th February<br />Parellel Session on Anesthesia and Critical Care<br />Mumtaz Hall, Taj Palace</td>
-                                                </tr>
-                                            </tbody>                            
-                                        </table>
-                                        <table class="table table-bordered">                            
-                                            <tbody>                                                
-                                                <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
-                                                    <td>Time</td>
-                                                    <td>Title</td>
-                                                    <td>Speaker</td>
-                                                    <td>Chair/Panel</td>
-                                                </tr>
-                                                {% for each in a4 %}
-                                                {% if forloop.counter|divisibleby:2 %}
-                                                <tr style="background-color:#D4AC0D; color:white;">{% else %}<tr>{% endif %}
-                                                    <td>{{each.time_range}}</td>
-                                                    <td>{{each.title}}</td>
-                                                    <td>{{each.speaker}}</td>
-                                                    <td>{{each.description}}</td>                                                                        
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>  
-                    </div>
-
-
-
-                </div>                                             
+                </div>
             </div>
         </div>
     </div>
@@ -174,10 +180,4 @@
 {% endblock content %}
 
 {% block scripts %}
-        {% if each.time_range %}
-        <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>
-        {% else %}
-        <td><b>{{each.title}}</td>
-        {% endif %}
-
 {% endblock scripts %}
