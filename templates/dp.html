@@ -52,10 +52,13 @@
                                                 <td width="15%">Speaker</td>
                                                 <td width="35%">Chair/Panel</td>
                                             </tr>
-                                            <tr>
-                                                <td colspan="4">Yolo</td>
-                                            </tr>
                                             {% for each in a1 %}
+                                            {% if each.single %}
+                                                <tr style="background-color:#2874A6; color:white;">
+                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td colspan="3"><strong>{{each.title}}</strong>
+                                                </tr>
+                                            {% else %}
                                             {% if each.time_range %}
                                             <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
@@ -63,6 +66,7 @@
                                                 <td><strong>{{each.speaker}}</strong></td>
                                                 <td><strong>{{each.description}}</strong></td>
                                             </tr>
+                                            {% endif %}
                                             {% endfor %}                                        
                                       </tbody>
                                     </table>
@@ -89,14 +93,21 @@
                                                 <td>Speaker</td>
                                                 <td>Chair/Panel</td>
                                             </tr>
-                                            {% for each in a2 %}
+                                            {% for each in a1 %}
+                                            {% if each.single %}
+                                                <tr style="background-color:#2874A6; color:white;">
+                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td colspan="3"><strong>{{each.title}}</strong>
+                                                </tr>
+                                            {% else %}
                                             {% if each.time_range %}
-                                            <tr style="background-color:#EC7063; color:white;">{% else %}<tr>{% endif %}
+                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
                                                 <td><strong>{{each.description}}</strong></td>
                                             </tr>
+                                            {% endif %}
                                             {% endfor %}
                                         </tbody>
                                     </table>
@@ -123,14 +134,21 @@
                                                 <td>Speaker</td>
                                                 <td>Chair/Panel</td>
                                             </tr>
-                                            {% for each in a3 %}
+                                            {% for each in a1 %}
+                                            {% if each.single %}
+                                                <tr style="background-color:#2874A6; color:white;">
+                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td colspan="3"><strong>{{each.title}}</strong>
+                                                </tr>
+                                            {% else %}
                                             {% if each.time_range %}
-                                            <tr style="background-color:#5D6D7E; color:white;">{% else %}<tr>{% endif %}
+                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
                                                 <td><strong>{{each.description}}</strong></td>
                                             </tr>
+                                            {% endif %}
                                             {% endfor %}
                                         </tbody>
                                     </table>
@@ -157,14 +175,21 @@
                                                 <td>Speaker</td>
                                                 <td>Chair/Panel</td>
                                             </tr>
-                                            {% for each in a4 %}
+                                            {% for each in a1 %}
+                                            {% if each.single %}
+                                                <tr style="background-color:#2874A6; color:white;">
+                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td colspan="3"><strong>{{each.title}}</strong>
+                                                </tr>
+                                            {% else %}
                                             {% if each.time_range %}
-                                            <tr style="background-color:#D4AC0D; color:white;">{% else %}<tr>{% endif %}
+                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
                                                 <td><strong>{{each.description}}</strong></td>
                                             </tr>
+                                            {% endif %}
                                             {% endfor %}
                                         </tbody>
                                     </table>
