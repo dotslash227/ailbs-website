@@ -28,11 +28,13 @@
                                 <td style="text-align: center;"><b>15th February<br />Kamal Hall, ITC Maurya</b></td>                                
                             </tr>
                             {% for each in a1 %}
-                            {% if forloop.counter|divisibleby:2 %}
-                            <tr style="background-color:#2874A6; color:white;">
-                            {% else %}<tr>{% endif %}
+                            {% if not each.dp %}
+                                {% if forloop.counter|divisibleby:2 %}
+                                <tr style="background-color:#2874A6; color:white;">
+                                {% else %}<tr>{% endif %}
                                 <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
                             </tr>
+                            {% endif %}
                             {% endfor %}
                         </tbody>
                     </table>

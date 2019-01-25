@@ -69,6 +69,8 @@ class Agenda15(models.Model):
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
     description = RichTextUploadingField(blank=True, null=True)    
+    dp = models.BooleanField(blank=True, null=True)
+    single = models.BooleanField(blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -79,7 +81,9 @@ class Agenda16(models.Model):
     title = models.CharField(max_length=150)
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
-    description = RichTextUploadingField(blank=True, null=True)    
+    description = RichTextUploadingField(blank=True, null=True)
+    dp = models.BooleanField(blank=True, null=True)
+    single = models.BooleanField(blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -91,6 +95,8 @@ class Agenda17(models.Model):
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
     description = RichTextUploadingField(blank=True, null=True)    
+    dp = models.BooleanField(blank=True, null=True)
+    single = models.BooleanField(blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -102,6 +108,8 @@ class Agenda172(models.Model):
     venue = models.CharField(max_length=150)
     speaker = models.CharField(max_length=150, blank=True, null=True)
     description = RichTextUploadingField(blank=True, null=True)    
+    dp = models.BooleanField(blank=True, null=True)
+    single = models.BooleanField(blank=True, null=True)
 
     def __str__(self):
         return self.title
