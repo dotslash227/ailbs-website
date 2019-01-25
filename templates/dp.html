@@ -27,7 +27,7 @@
                         <li class="active"><a data-toggle="tab" href="#15f">15th February 2019</a></li>
                         <li><a data-toggle="tab" href="#16f">16th February 2019</a></li>
                         <li><a data-toggle="tab" href="#17f">17th February 2019</a></li>
-                        <li><a data-toggle="tab" href="#172f">Anesthesia and Critical Care : 17th February 2019</a></li>
+                        <li><a data-toggle="tab" href="#172f">Anesthesia and Critical Care : 17th February</a></li>
                     </ul>
 
                     <div class="tab-content">
@@ -92,15 +92,15 @@
                                                 <td>Speaker</td>
                                                 <td>Chair/Panel</td>
                                             </tr>
-                                            {% for each in a1 %}
+                                            {% for each in a2 %}
                                             {% if each.single %}
-                                                <tr style="background-color:#2874A6; color:white;">
+                                                <tr style="background-color:#EC7063; color:white;">
                                                     <td colspan="1"><strong>{{each.time_range}}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
-                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
+                                            <tr style="background-color:#EC7063; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
@@ -133,15 +133,15 @@
                                                 <td>Speaker</td>
                                                 <td>Chair/Panel</td>
                                             </tr>
-                                            {% for each in a1 %}
+                                            {% for each in a3 %}
                                             {% if each.single %}
-                                                <tr style="background-color:#2874A6; color:white;">
+                                                <tr style="background-color:#5D6D7E; color:white;">
                                                     <td colspan="1"><strong>{{each.time_range}}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
-                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
+                                            <tr style="background-color:#5D6D7E; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
@@ -174,15 +174,15 @@
                                                 <td>Speaker</td>
                                                 <td>Chair/Panel</td>
                                             </tr>
-                                            {% for each in a1 %}
+                                            {% for each in a4 %}
                                             {% if each.single %}
-                                                <tr style="background-color:#2874A6; color:white;">
+                                                <tr style="background-color:#D4AC0D; color:white;">
                                                     <td colspan="1"><strong>{{each.time_range}}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
-                                            <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
+                                            <tr style="background-color:#D4AC0D; color:white;">{% else %}<tr>{% endif %}
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
