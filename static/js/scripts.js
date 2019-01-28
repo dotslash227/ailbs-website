@@ -14,7 +14,7 @@
         // Slider Options
         $(".Modern-Slider").slick({
             autoplay:true,
-            autoplaySpeed:7000,
+            autoplaySpeed:3000,
             speed:600,
             slidesToShow:1,
             slidesToScroll:1,

@@ -30,3 +30,11 @@
 .conf-image{
     margin-top: -110px;
 }
+
+.normal{
+    color:black;
+}
+.blue{
+    background-color: #2874A6;
+    color:white; 
+}
