@@ -3,7 +3,7 @@ from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, Anasthesia
 from .models import News, Downloads, Agenda15, Agenda16, Agenda17, Agenda172
 
 def index(request):
-    slides = HomeSlider.objects.all()
+    slides = HomeSlider.objects.all().order_by("?")
     surgery = SurgeryFaculty.objects.all().order_by("lname")
     anes = AnasthesiaFaculty.objects.all().order_by("lname")
     hepa = HepatologyFaculty.objects.all().order_by("lname")

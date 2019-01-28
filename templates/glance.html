@@ -28,10 +28,10 @@
                                 <td style="text-align: center;"><b>15th February<br />Kamal Hall, ITC Maurya</b></td>                                
                             </tr>
                             {% for each in a1 %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <tr style="background-color:#2874A6; color:white;">
+                            {% else %}<tr>{% endif %}
                             {% if each.time_range %}
-                                {% if forloop.counter|divisibleby:2 %}
-                                <tr style="background-color:#2874A6; color:white;">
-                                {% else %}<tr>{% endif %}
                                 <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
                             </tr>
                             {% endif %}
@@ -46,10 +46,10 @@
                                 <td style="text-align: center;"><b>16th February<br />Shahjahan Hall, Taj Palace</b></td>
                             </tr>
                             {% for each in a2 %}
-                            {% if each.time_range %}
-                                {% if forloop.counter|divisibleby:2 %}
+                            {% if forloop.counter|divisibleby:2 %}
                                 <tr style="background-color:#EC7063; color:white;">
                                 {% else %}<tr>{% endif %}
+                            {% if each.time_range %}                                
                                 <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
                             </tr>
                             {% endif %}
@@ -64,10 +64,10 @@
                                 <td style="text-align: center;"><b>17th February<br />Shahjahan Hall, Taj Palace</b></td>
                             </tr>
                             {% for each in a3 %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <tr style="background-color:#5D6D7E; color:white;">
+                            {% else %}<tr>{% endif %}
                             {% if each.time_range %}
-                                {% if forloop.counter|divisibleby:2 %}
-                                <tr style="background-color:#5D6D7E; color:white;">
-                                {% else %}<tr>{% endif %}
                                 <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
                             </tr>
                             {% endif %}
@@ -82,10 +82,10 @@
                                 <td style="text-align: center;"><b>17th February<br />Parellel Session on Anesthesia and Critical Care<br />Mumtaz Hall, Taj Palace</b></td>
                             </tr>
                             {% for each in a4 %}
-                            {% if each.time_range %}
-                                {% if forloop.counter|divisibleby:2 %}
+                            {% if forloop.counter|divisibleby:2 %}
                                 <tr style="background-color:#D4AC0D; color:white;">
                                 {% else %}<tr>{% endif %}
+                            {% if each.time_range %}                                
                                 <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
                             </tr>
                             {% endif %}

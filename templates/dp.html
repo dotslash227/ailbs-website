@@ -23,7 +23,7 @@
         <div class="row" style="margin-top:-150px;">
             <div class="col-md-12">
                 <div class="coordinator_main">
-                    <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs" style="margin-left:70px;">
                         <li class="active"><a data-toggle="tab" href="#15f">15th February 2019</a></li>
                         <li><a data-toggle="tab" href="#16f">16th February 2019</a></li>
                         <li><a data-toggle="tab" href="#17f">17th February 2019</a></li>
@@ -63,7 +63,7 @@
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description}}</strong></td>
+                                                <td><strong>{{each.description|safe}}</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}                                        
@@ -87,10 +87,10 @@
                                     <table class="table table-bordered">
                                         <tbody>
                                             <tr style="background-color:#EC7063; color:white; font-weight: bold;">
-                                                <td>Time</td>
-                                                <td>Title</td>
-                                                <td>Speaker</td>
-                                                <td>Chair/Panel</td>
+                                                <td width="15%">Time</td>
+                                                <td width="35%">Title</td>
+                                                <td width="15%">Speaker</td>
+                                                <td width="35%">Chair/Panel</td>
                                             </tr>
                                             {% for each in a2 %}
                                             {% if each.single %}
@@ -104,7 +104,7 @@
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description}}</strong></td>
+                                                <td><strong>{{each.description|safe}}</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}
@@ -128,10 +128,10 @@
                                     <table class="table table-bordered">
                                         <tbody>
                                             <tr style="background-color:#5D6D7E; color:white; font-weight: bold;">
-                                                <td>Time</td>
-                                                <td>Title</td>
-                                                <td>Speaker</td>
-                                                <td>Chair/Panel</td>
+                                                <td width="15%">Time</td>
+                                                <td width="35%">Title</td>
+                                                <td width="15%">Speaker</td>
+                                                <td width="35%">Chair/Panel</td>
                                             </tr>
                                             {% for each in a3 %}
                                             {% if each.single %}
@@ -145,7 +145,7 @@
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description}}</strong></td>
+                                                <td><strong>{{each.description|safe}}</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}
@@ -169,10 +169,10 @@
                                     <table class="table table-bordered">
                                         <tbody>
                                             <tr style="background-color:#D4AC0D; color:white; font-weight: bold;">
-                                                <td>Time</td>
-                                                <td>Title</td>
-                                                <td>Speaker</td>
-                                                <td>Chair/Panel</td>
+                                                <td width="15%">Time</td>
+                                                <td width="35%">Title</td>
+                                                <td width="15%">Speaker</td>
+                                                <td width="35%">Chair/Panel</td>
                                             </tr>
                                             {% for each in a4 %}
                                             {% if each.single %}
@@ -186,7 +186,7 @@
                                                 <td><strong>{{each.time_range}}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description}}</strong></td>
+                                                <td><strong>{{each.description|safe}}</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}
