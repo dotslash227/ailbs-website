@@ -31,10 +31,10 @@
                             {% if forloop.counter|divisibleby:2 %}
                             <tr style="background-color:#2874A6; color:white;">
                             {% else %}<tr>{% endif %}
-                            {% if each.time_range %}
-                                <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>                                
+                                {% if each.time_range %}
+                                    <td><b>{{each.time_range|upper}}</b> - {{each.title}}</td>
+                                {% endif %}
                             </tr>
-                            {% endif %}
                             {% endfor %}
                         </tbody>
                     </table>

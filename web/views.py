@@ -33,10 +33,10 @@ def interfac(request):
     })
 
 def programeglance(request):
-  agenda15 = Agenda15.objects.all()
-  agenda16 = Agenda16.objects.all()
-  agenda17 = Agenda17.objects.all()
-  agenda172 = Agenda172.objects.all()
+  agenda15 = Agenda15.objects.all().values("time_range", "title").order_by("time_range")
+  agenda16 = Agenda16.objects.all().values("time_range", "title").order_by("time_range")
+  agenda17 = Agenda17.objects.all().values("time_range", "title").order_by("time_range")
+  agenda172 = Agenda172.objects.all().values("time_range", "title").order_by("time_range")
 
   return render(request, "glance.html", {
     "a1": agenda15, "a2":agenda16, "a3":agenda17, "a4":agenda172
