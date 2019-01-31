@@ -3,6 +3,7 @@ from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from .models import InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
 from .models import Downloads, News, Agenda15, Agenda16, Agenda17
+from registration.models import Registration, AnesthesiaRegistration
 
 
 @csrf_exempt
@@ -125,3 +126,15 @@ def agendaapi(request, day):
         data.append(record)
 
     return JsonResponse(data, safe=False)
+
+@csrf_exempt
+def attendeesapi(request):
+    a1 = Registration.objects.all().order_by("last_name")
+    a2 = AnesthesiaRegistration.objects.all().order_by("last_name")
+    registrations = []
+    for each in a1:
+        registrations.append(each)
+    for each in a2:
+        registrations.append(each)
+
+    return JsonResponse(registrations, safe=False)

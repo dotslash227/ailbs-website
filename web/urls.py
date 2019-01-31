@@ -17,5 +17,6 @@ urlpatterns = [
     path('apis/get-downloads', apis.downloadapi),
     path('apis/get-news-list', apis.newslist),
     path('apis/news/<int:news_id>', apis.newsitem),
-    path('apis/agenda', apis.agendaapi)
+    path('apis/agenda', apis.agendaapi),
+    path('apis/attendees', apis.attendeesapi),
 ]
