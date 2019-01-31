@@ -133,8 +133,24 @@ def attendeesapi(request):
     a2 = AnesthesiaRegistration.objects.all().order_by("last_name")
     registrations = []
     for each in a1:
-        registrations.append(each)
+        record = {
+            "fname": each.first_name,
+            "lname": each.last_name,
+            "hospital": each.hospital,
+            "speciality": each.speciality,
+            "mobile": each.mobile,
+            "country": each.country
+        }
+        registrations.append(record)
     for each in a2:
-        registrations.append(each)
+        record = {
+            "fname": each.first_name,
+            "lname": each.last_name,
+            "hospital": each.hospital,
+            "speciality": each.speciality,
+            "mobile": each.mobile,
+            "country": each.country
+        }
+        registrations.append(record)
 
     return JsonResponse(registrations, safe=False)
