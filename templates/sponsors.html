@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{flatpage.title}}{% endblock title %}
+
+{% block content %}
+<section class="banner inner_banner" style="background-image: url('../../static/img/banner/banner_slide_02.jpg')"></section><!--//END Banner --><!--//END Banner -->
+<div class="breadcrumb_main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "web:index" %}">Home</a></li>
+            <li class="breadcrumb-item active">Sponsors and Exhibitors</li>
+        </ol>
+    </div>
+</div>
+
+<section class="content_area">
+    <div class="container">
+        <div class="main_heading clearfix">
+            <h2>Sponsors and Exhibitors</h2>
+        </div>
+        <div class="row">
+            {% for each in sponsors %}
+                <div class="col-md-4">
+                    <img src="{{each.logo.url}}" class="img-responsive" />
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

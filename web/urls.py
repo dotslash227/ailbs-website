@@ -19,4 +19,6 @@ urlpatterns = [
     path('apis/news/<int:news_id>', apis.newsitem),
     path('apis/agenda', apis.agendaapi),
     path('apis/attendees', apis.attendeesapi),
+    path('apis/sponsors', apis.sponsorsapi),
+    path('sponsors', views.sponsorPage, name="sponsors")
 ]

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import News, Downloads, Agenda15, Agenda16, Agenda17, Agenda172
+from .models import News, Downloads, Agenda15, Agenda16, Agenda17, Agenda172, Sponsors
 
 def index(request):
     slides = HomeSlider.objects.all().order_by("?")
@@ -51,4 +51,11 @@ def dailyprogram(request):
 
   return render(request, "dp.html", {
     "a1": agenda15, "a2":agenda16, "a3":agenda17, "a4":agenda172
+  })
+
+def sponsorPage(request):
+  sponsors = Sponsors.objects.all().order_by("?")
+
+  return render(request, "sponsors.html", {
+    "sponsors": sponsors,
   })

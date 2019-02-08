@@ -113,3 +113,10 @@ class Agenda172(models.Model):
 
     def __str__(self):
         return self.title
+
+class Sponsors(models.Model):
+    name = models.CharField(max_length=150)
+    logo = models.FileField(max_length=200, upload_to="logos")
+
+    def __str__(self):
+        return self.name

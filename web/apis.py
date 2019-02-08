@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from .models import InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import Downloads, News, Agenda15, Agenda16, Agenda17
+from .models import Downloads, News, Agenda15, Agenda16, Agenda17, Sponsors
 from registration.models import Registration, AnesthesiaRegistration
 
 
@@ -154,3 +154,17 @@ def attendeesapi(request):
         registrations.append(record)
 
     return JsonResponse(registrations, safe=False)
+
+
+@csrf_exempt
+def sponsorsapi(request):
+    sponsors = Sponsors.objects.all().order_by("?")
+    data = []
+    for each in sponsors:
+        record = {
+            "name": each.name,
+            "logourl": "https://www.ailbsindiaconference.com" + each.logo.url
+        }
+        data.append(record)
+
+    return JsonResponse(data, safe=False)

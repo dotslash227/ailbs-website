@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import HomeSlider, InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
-from .models import Downloads, News, Agenda15, Agenda16, Agenda17, Agenda172
+from .models import Downloads, News, Agenda15, Agenda16, Agenda17, Agenda172, Sponsors
 from django.db import models
 from django.contrib.flatpages.admin import FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
@@ -34,3 +34,4 @@ admin.site.register(HepatologyFaculty, CommonAdmin)
 admin.site.register(InternationalFaculty)
 admin.site.register(Downloads)
 admin.site.register(News)
+admin.site.register(Sponsors)
