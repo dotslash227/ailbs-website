@@ -20,13 +20,16 @@ class CommonAdmin(ImportExportActionModelAdmin):
 class CommonAdmin2(ImportExportActionModelAdmin):
     list_display = ["fname", "lname"]
 
+class CommonAdmin3(ImportExportActionModelAdmin):
+    list_display = ["time_range", "title", "description", "speaker"]
+
 # Re-register FlatPageAdmin
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
-admin.site.register(Agenda15, CommonAdmin)
-admin.site.register(Agenda16, CommonAdmin)
-admin.site.register(Agenda17, CommonAdmin)
-admin.site.register(Agenda172, CommonAdmin)
+admin.site.register(Agenda15, CommonAdmin3)
+admin.site.register(Agenda16, CommonAdmin3)
+admin.site.register(Agenda17, CommonAdmin3)
+admin.site.register(Agenda172, CommonAdmin3)
 admin.site.register(HomeSlider)
 admin.site.register(SurgeryFaculty, CommonAdmin2)
 admin.site.register(AnasthesiaFaculty, CommonAdmin2)
