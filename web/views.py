@@ -54,7 +54,7 @@ def dailyprogram(request):
   })
 
 def sponsorPage(request):
-  sponsors = Sponsors.objects.all().order_by("?")
+  sponsors = Sponsors.objects.all().order_by("priority")
 
   return render(request, "sponsors.html", {
     "sponsors": sponsors,

@@ -116,6 +116,7 @@ class Agenda172(models.Model):
 
 class Sponsors(models.Model):
     name = models.CharField(max_length=150)
+    priority = models.IntegerField(default=1)
     logo = models.FileField(max_length=200, upload_to="logos")
 
     def __str__(self):

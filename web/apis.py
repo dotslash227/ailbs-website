@@ -158,7 +158,7 @@ def attendeesapi(request):
 
 @csrf_exempt
 def sponsorsapi(request):
-    sponsors = Sponsors.objects.all().order_by("?")
+    sponsors = Sponsors.objects.all().order_by("priority")
     data = []
     for each in sponsors:
         record = {
