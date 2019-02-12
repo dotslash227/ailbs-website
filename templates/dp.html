@@ -56,16 +56,16 @@
                                             {% for each in a1 %}
                                             {% if each.single %}
                                                 <tr style="background-color:#2874A6; color:white;">
-                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
                                             <tr style="background-color:#2874A6; color:white;">{% else %}<tr>{% endif %}
-                                                <td><strong>{{each.time_range}}</strong></td>
+                                                <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description|safe}}</strong></td>
+                                                <td><strong>{% if each.description %}{{each.description|safe}}{% endif %</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}                                        
@@ -97,16 +97,16 @@
                                             {% for each in a2 %}
                                             {% if each.single %}
                                                 <tr style="background-color:#EC7063; color:white;">
-                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
                                             <tr style="background-color:#EC7063; color:white;">{% else %}<tr>{% endif %}
-                                                <td><strong>{{each.time_range}}</strong></td>
+                                                <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description|safe}}</strong></td>
+                                                <td><strong>{% if each.description %}{{each.description|safe}}{% endif %</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}
@@ -138,16 +138,16 @@
                                             {% for each in a3 %}
                                             {% if each.single %}
                                                 <tr style="background-color:#5D6D7E; color:white;">
-                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
                                             <tr style="background-color:#5D6D7E; color:white;">{% else %}<tr>{% endif %}
-                                                <td><strong>{{each.time_range}}</strong></td>
+                                                <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description|safe}}</strong></td>
+                                                <td><strong>{% if each.description %}{{each.description|safe}}{% endif %</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}
@@ -179,16 +179,16 @@
                                             {% for each in a4 %}
                                             {% if each.single %}
                                                 <tr style="background-color:#D4AC0D; color:white;">
-                                                    <td colspan="1"><strong>{{each.time_range}}</strong></td>
+                                                    <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                     <td colspan="3"><strong>{{each.title}}</strong>
                                                 </tr>
                                             {% else %}
                                             {% if each.time_range %}
                                             <tr style="background-color:#D4AC0D; color:white;">{% else %}<tr>{% endif %}
-                                                <td><strong>{{each.time_range}}</strong></td>
+                                                <td><strong>{% if each.time_range %}{{each.time_range}}{% endif %}</strong></td>
                                                 <td><strong>{{each.title}}</strong></td>
                                                 <td><strong>{{each.speaker}}</strong></td>
-                                                <td><strong>{{each.description|safe}}</strong></td>
+                                                <td><strong>{% if each.description %}{{each.description|safe}}{% endif %</strong></td>
                                             </tr>
                                             {% endif %}
                                             {% endfor %}
