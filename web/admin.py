@@ -22,6 +22,7 @@ class CommonAdmin2(ImportExportActionModelAdmin):
 
 class CommonAdmin3(ImportExportActionModelAdmin):
     list_display = ["time_range", "title", "description", "speaker"]
+    list_display_links = ["time_range", "title"]
 
 # Re-register FlatPageAdmin
 admin.site.unregister(FlatPage)
