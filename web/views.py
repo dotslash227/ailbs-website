@@ -46,7 +46,7 @@ def programeglance(request):
 def dailyprogram(request):
   agenda15 = Agenda15.objects.all()
   agenda16 = Agenda16.objects.all()
-  agenda17 = Agenda17.objects.all()
+  agenda17 = Agenda17.objects.all().order_by("-pk")
   agenda172 = Agenda172.objects.all()
 
   return render(request, "dp.html", {
