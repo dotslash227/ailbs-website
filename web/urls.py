@@ -20,5 +20,6 @@ urlpatterns = [
     path('apis/agenda', apis.agendaapi),
     path('apis/attendees', apis.attendeesapi),
     path('apis/sponsors', apis.sponsorsapi),
-    path('sponsors', views.sponsorPage, name="sponsors")
+    path('sponsors', views.sponsorPage, name="sponsors"),
+    path('apis/synopsis', apis.getSynopsis, name="synopsis"),
 ]

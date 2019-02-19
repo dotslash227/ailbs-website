@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import InternationalFaculty, SurgeryFaculty, AnasthesiaFaculty, HepatologyFaculty
 from .models import Downloads, News, Agenda15, Agenda16, Agenda17, Sponsors
 from registration.models import Registration, AnesthesiaRegistration
-
+from django.contrib.flatpages.models import FlatPage
 
 @csrf_exempt
 def internationalFaculty(request):
@@ -168,3 +168,15 @@ def sponsorsapi(request):
         data.append(record)
 
     return JsonResponse(data, safe=False)
+
+
+@csrf_exempt
+def getSynopsis(request):
+    page = FlatPage.objects.get(title="Synopsis")
+
+    record = {
+        "title": page.title,
+        "content": page.content
+    }
+
+    return JsonResponse(record, safe=False)
