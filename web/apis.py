@@ -174,9 +174,9 @@ def sponsorsapi(request):
 def getSynopsis(request):
     page = FlatPage.objects.get(title="Synopsis")
 
-    record = {
+    record = [{
         "title": page.title,
         "content": page.content
-    }
+    }]
 
     return JsonResponse(record, safe=False)
